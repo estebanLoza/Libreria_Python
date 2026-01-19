@@ -1,0 +1,25 @@
+#ignorando los siguientes archivos
+#
+#
+
+# =========================
+# Python cache
+# =========================
+__pycache__/
+*.py[cod]
+
+
+
+# =========================
+# Editors / IDEs
+# =========================
+.vscode/
+
+
+# =========================
+# Python tooling caches
+# =========================
+.pyre/
+.mypy_cache/
+.pytype/
+
