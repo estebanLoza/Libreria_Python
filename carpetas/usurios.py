@@ -1,5 +1,7 @@
 #Libreria para poder comparar las fechas vencidas con la pc
 from datetime import date
+from datos import Libros
+
 
 
 
@@ -7,7 +9,10 @@ from datetime import date
 usuarios = {
     "Esteban Hernandez": {
         "ID": 10001,
-        "Libros Prestados": ["La Tregua", "Las Intermitencias De La Muerte", "Caín"],
+        "Libros Prestados": [
+            {"Titulo": "La Tregua", "Fecha Vencimiento": date(2026, 1, 26)},
+            {"Titulo": "Las Internmitencias De La Muerte", "Fecha Vencimiento":date(2026, 4, 1)}
+        ],
     }, 
     "Juan Martinez": {
         "ID": 10002,
@@ -71,10 +76,37 @@ def Usuarios():
                         for clave, valor in informacion.items():
                             print(f"{clave}: {valor}\n")
                         break
+                break
+        
+        elif opcion == 2:
+            print("lista de los proximos libros a vencer: ")
+                
+            usuario = input("Ingresa el usuario: ")
+            
+            print("\n\n")
+            print(f"Usuario: {usuario}")
+            
+            tituloLibro = usuarios[usuario]["Libros Prestados"][0]["Titulo"]
 
+            print(f"Titulo del libro: {tituloLibro}")
+            print(f'Fecha Vencimiento: {usuarios[usuario]["Libros Prestados"][0]["Fecha Vencimiento"]}')
+
+            #Segundo Libro
+            tituloLibroDos = usuarios[usuario]["Libros Prestados"][1]["Titulo"]
+            fechaVencimiento = usuarios[usuario]["Libros Prestados"][1]["Fecha Vencimiento"]
+           
+            print("\n\n")
+
+            print(f"Titulo: {tituloLibroDos}")
+            print(f"Fecha Vencimiento: {fechaVencimiento}")
+            
+            print("\n\n")
+            
         elif opcion == 3:
             print("-" * 24 + "HASTA PRONTO" + "-" * 24)
             break
+
+
 
 Usuarios()
 
