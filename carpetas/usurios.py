@@ -35,8 +35,16 @@ usuarios = {
             {"Titulo": "Ensayo Sobre La Lucidez",
                 "Fecha Vencimiento": date(2026, 2, 12)},
             {"Titulo": "El Principito",
-                "Fecha Vencivmiento": date(2026, 2, 26)},
+                "Fecha Vencimiento": date(2026, 2, 26)},
             {"Titulo": "Ficciones", "Fecha Vencimiento": date(2026, 3, 15)}
+        ]
+    },
+    "Mario Aguilar": {
+        "ID": 10005,
+        "Libros Prestados": [
+            {"Titulo": "Memoria de putas tristesas",
+             "Fecha Vencimiento": date(2026, 3, 1)}
+            
         ]
     }
 }
@@ -60,8 +68,9 @@ def Usuarios():
         print("")
         print("\n OPCIONES: ")
         print("     1) Buscar usuario")
-        print("     2) Proximos Vencimientos")
-        print("     3) Multas de Usuarios")
+        print("     2) Libros Vencidos")
+        print("     3) Libros Sin vencer")
+        print("     4) Multas de Usuarios")
         print("\n")
         print("-" * 84)
 
@@ -81,8 +90,6 @@ def Usuarios():
                 break
 
         elif opcion == 2:
-            busqueda = input("Ingresa el nombre: ")
-
             # if busqueda in usuarios:
             #
             #     tituloLibroDos = usuarios[busqueda]["Libros Prestados"][1]["Titulo"]
@@ -91,31 +98,59 @@ def Usuarios():
             #     print(f"{fechaVencimiento}")
             #     print(f"{fechaVencimiento}")
             #
+        
+
+            hoy = date.today() 
+
+
+            print("Próximos Vencimientos: \n")
+
+
+
+            #Juntamos todos los libros
+
+            todos = []
+
 
             for nombre, info in usuarios.items():
-                proximo = None
-
                 for libro in info["Libros Prestados"]:
                     fecha = libro.get("Fecha Vencimiento")
+                    if fecha is None:   #Si no tienen fecha se ignora
+                        continue
+                    todos.append((nombre,libro, fecha))
 
-                    if fecha is None:
-                        continue  # ignora los libros sin fecha
+            # Ordenamos del más próximo al más lejano
+            todos.sort(key=lambda x: x[2])
 
-                    if proximo is None or fecha < proximo["Fecha Vencimiento"]:
-                        proximo = libro
-
-                if proximo:
-                    print(
-                        f"{nombre} -> {proximo['Titulo']} | Vence: {proximo['Fecha Vencimiento']}")
-                    print("\n")
+            for nombre, libro, fecha in todos:
+                if fecha == hoy:
+                    print(f"⚠️  HOY VENCE -> {nombre} |  {libro['Titulo']}")
                 else:
-                    print(f"{nombre} -> No hay fechas registradas")
-
-            print("\n\n")
+                    print(f"  {nombre} -> {libro['Titulo']}  |  Vence: {fecha}")
 
         elif opcion == 3:
-            print("-" * 24 + "HASTA PRONTO" + "-" * 24)
-            break
 
+            hoy = date.today()
+            print("Fecha Más Lejanas:  \n")
+
+
+            todos = []
+
+            for nombre, info in usuarios.items():
+                for libro in info["Libros Prestados"]:
+                    fecha = libro.get("Fecha Vencimiento")
+                    if fecha is None: #Si no tienen fecha, los ignorará
+                        continue
+                    if fecha > hoy: # Solo los que aún no vencen
+                        todos.append((nombre, libro, fecha))  # a la lista "todos" le agregamos una tupla ((nombre ,libro, fecha))
+
+            # Ordenamos del más lejano al más proximo
+            todos.sort(key=lambda x: x[2], reverse=True)
+
+            #x[2] significa que ordena usando el tercer elemento de cada tupla, que es la fecha
+            # reverse = True -> de mayor a menor
+            # sin reverse -> de menor a mayor(más próximo primero) 
+            for nombre, libro, fecha in todos:
+                print(f" {nombre} -> {libro['Titulo']} | Vence: {fecha}\n\n")
 
 Usuarios()
