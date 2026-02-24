@@ -1,6 +1,6 @@
 # Libreria para poder comparar las fechas vencidas con la pc
 from datetime import date
-from datos import Libros
+from carpetas.datos import Libros
 
 
 # Usuarios ya establecidos
@@ -57,10 +57,9 @@ def Usuarios():
     """
         Menu de la sección de usuario, solo vista
     """
+    print("USUARIOS")
+    print("\n")
 
-
-while True:
-    print("-" * 84)
     print(" " * 42 + "USUARIOS")
     print(
         " " * 21 + "Esta sección da iformación de usuarios, así como los libros pedidos")
@@ -180,5 +179,3 @@ while True:
                 print(
                     f"  {nombre} -> {libro['Titulo']}  |  Vencio: {fecha} | Dias de Expiración: {diasDiferencia} |  Total Multa: {TotalMulta}")
                 print("\n")
-
-Usuarios()
