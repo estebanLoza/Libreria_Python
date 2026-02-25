@@ -1,3 +1,7 @@
+# Esta seccion es solo para la visualizacion que tendría el usuario, sin los permisos de
+# Administrador para agregar o eliminar un libro.
+
+
 import json  # importación de los datos creados en json
 import os  # Para poder acceder al sistema y así guardar los datos cada vez que inicie
 
@@ -8,14 +12,14 @@ from PIL import Image
 from io import BytesIO
 
 
-ARCHIVO = os.path.join(os.path.dirname(__file__), "libros.json")
+ARCHIVO = os.path.join(os.path.dirname(__file__), "librosDatos.json")
 
 # Funciones para subir y guardar libros usando el json como base de datos
 # y también poder modificarlo
 
 
 def subirLibros():
-    with open(ARCHIVO, "r", enconding="utf-8") as f:
+    with open(ARCHIVO, "r", encoding="utf-8") as f:
         return json.load(f)
 
 
@@ -38,3 +42,20 @@ def Libros():
 
         print("1) Mostrar El catalogo")
         print("2) Buscar Libro Especifico")
+
+        opcion = int(input(": "))
+
+        print('\n')
+
+        if opcion == 1:
+            for titulo, info in libros.items():
+                print(f"""
+                    📖 **{titulo}**
+                    
+                    🙎  Autor: {info["Autor"]}
+                    📕  Sinopsis: {info["Sinopsis"]}
+                    🗓️   Año: {info["Año"]} """)
+
+
+if __name__ == "__main__":
+    Libros()
