@@ -35,3 +35,6 @@ def Libros():
         print("*" + " " * 48 + "*")
         print("*" * 50)
         print("\n")
+
+        print("1) Mostrar El catalogo")
+        print("2) Buscar Libro Especifico")
