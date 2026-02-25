@@ -16,10 +16,17 @@ def main():
     print("*" * 50)
     print("\n")
 
+    print("1) Información de Usuarios")
+    print("2) Lista de libros disponibles")
+    print("3) Creación de un nuevos usuarios")
+    print("4) ")
+
     opcion = int(input(": "))
 
     if opcion == 1:
         Usuarios()
+    elif opcion == 2:
+        Libros()
 
 
 if __name__ == "__main__":
