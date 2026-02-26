@@ -8,7 +8,6 @@
 
 # Libreria para poder comparar las fechas vencidas con la pc
 from datetime import date
-from carpetas.datos import Libros
 
 
 # Usuarios ya establecidos
