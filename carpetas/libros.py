@@ -28,34 +28,23 @@ def guardarLibro(libros):
         json.dump(libros, f, ensure_ascii=False, indent=4)
 
 
-def Libros():
-    while True:
+def LibrosCatalogo():
+    libros = subirLibros()
 
-        libros = subirLibros()
+    print("\n")
+    print(" "*50 + "*" * 50)
+    print(" "*50 + "*" + " Catalogo de Libros".center(48) + "*")
+    print(" "*50 + "*" + " " * 48 + "*")
+    print(" "*50 + "*" * 50)
+    print("\n")
+    for titulo, info in libros.items():
+        print(f"""
+                📖 **{titulo}**
 
-        print("\n")
-        print("*" * 50)
-        print("*" + " Catalogo de Libros".center(48) + "*")
-        print("*" + " " * 48 + "*")
-        print("*" * 50)
-        print("\n")
-
-        print("1) Mostrar El catalogo")
-        print("2) Buscar Libro Especifico")
-
-        opcion = int(input(": "))
-
-        print('\n')
-
-        if opcion == 1:
-            for titulo, info in libros.items():
-                print(f"""
-                    📖 **{titulo}**
-                    
-                    🙎  Autor: {info["Autor"]}
-                    📕  Sinopsis: {info["Sinopsis"]}
-                    🗓️   Año: {info["Año"]} """)
+                🙎  Autor: {info["Autor"]}
+                📕  Sinopsis: {info["Sinopsis"]}
+                🗓️   Año: {info["Año"]} """)
 
 
 if __name__ == "__main__":
-    Libros()
+    LibrosCatalogo()
