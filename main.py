@@ -1,7 +1,7 @@
 # Gestión de biblioteca v1.1
 
 from carpetas.datos import Libros
-from carpetas.usurios import Usuarios
+from Administradores.usurios import Usuarios
 
 # Pruebas de imprimir el diccionario
 # for mostrar in Libros.items():
@@ -16,17 +16,27 @@ def main():
     print("*" * 50)
     print("\n")
 
-    print("1) Información de Usuarios")
-    print("2) Lista de libros disponibles")
-    print("3) Creación de un nuevos usuarios")
-    print("4) ")
+    print("1) Lista de libros disponibles")
+    print("2) Buscar por Escritores")
+    print("3) Ganadores de Premios Nobels")
+    print("4) Generos")
+    print("5) Administrador")
+    print("0) **Salir**")
+    print(": ")
 
-    opcion = int(input(": "))
+    try:
+        opcion = int(input(": "))
 
-    if opcion == 1:
-        Usuarios()
-    elif opcion == 2:
-        Libros()
+        if opcion == 1:
+        elif opcion == 2:
+        elif opcion == 3:
+        elif opcion == 4:
+        elif opcion == 5:
+        elif opcion == 0:
+
+    except ValueError:
+        # Se ejecuta si la conversión a int() falla
+        print("Erro: Por favor, ingrese un numero del 0 al 5. \n")
 
 
 if __name__ == "__main__":
