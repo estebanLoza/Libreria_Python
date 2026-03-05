@@ -3,7 +3,7 @@
 
 from Administradores.usurios import Usuarios
 from carpetas.libros import LibrosCatalogo
-
+from carpetas.escritores import busquedaEscritores
 
 # Pruebas de imprimir el diccionario
 # for mostrar in Libros.items():
@@ -40,12 +40,14 @@ def main():
             if opcion == 1:
                 LibrosCatalogo()
                 print("\n")
-            # elif opcion == 2:
-            # elif opcion == 3:
-            # elif opcion == 4:
-            # elif opcion == 5:
-            # elif opcion == 0:
-            #
+
+            elif opcion == 2:
+                busquedaEscritores()
+                print("\n")
+
+            elif opcion == 0:
+                break
+
         except ValueError:
             # Se ejecuta si la conversión a int() falla
             print("Erro: Por favor, ingrese un numero del 0 al 5. \n")
