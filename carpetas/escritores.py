@@ -22,7 +22,6 @@ def busquedaEscritores():
 
     libros = subirLibros()
     
-    
     while True:
         
         print("\n")
