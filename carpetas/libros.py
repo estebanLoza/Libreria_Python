@@ -11,26 +11,21 @@ import requests
 from PIL import Image
 from io import BytesIO
 
-
 ARCHIVO = os.path.join(os.path.dirname(__file__), "librosDatos.json")
 
 # Funciones para subir y guardar libros usando el json como base de datos
 # y también poder modificarlo
 
-
 def subirLibros():
     with open(ARCHIVO, "r", encoding="utf-8") as f:
         return json.load(f)
-
 
 def guardarLibro(libros):
     with open(ARCHIVO, "w", encoding="utf-8") as f:
         json.dump(libros, f, ensure_ascii=False, indent=4)
 
-
 def LibrosCatalogo():
     libros = subirLibros()
-
     print("\n")
     print(" "*50 + "*" * 50)
     print(" "*50 + "*" + " Catalogo de Libros".center(48) + "*")
@@ -43,8 +38,10 @@ def LibrosCatalogo():
 
                 🙎  Autor: {info["Autor"]}
                 📕  Sinopsis: {info["Sinopsis"]}
-                🗓️   Año: {info["Año"]} """)
-
+                🗓️   Año: {info["Año"]} 
+                🖼️   Portada: {info["Portada"]}
+                """)
+                 
 
 if __name__ == "__main__":
     LibrosCatalogo()
