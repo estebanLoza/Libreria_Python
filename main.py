@@ -4,6 +4,7 @@
 from Administradores.usurios import Usuarios
 from carpetas.libros import LibrosCatalogo
 from carpetas.escritores import busquedaEscritores
+from carpetas.ganadoresNobels import ganadoresNobel 
 
 # Pruebas de imprimir el diccionario
 # for mostrar in Libros.items():
@@ -15,18 +16,18 @@ def mostrarBanner():
     print(" " * 50 + "*" + " BIBLIOTECA SAN FE".center(48) + "*")
     print(" " * 50 + "*" + " " * 48 + "*")
     print(" " * 50 + "*" * 50)
-    
+
     arte = r"""
-                                                .--.                      .---.
-                                            .---|__|              .-.     |~~~|
-                                            .--|===|--|_          |_|     |~~~|--.
-                                            |  |===|  |'\     .---!~|  .--|   |--|
-                                            |%%|   |  |.'\    |===| |--|%%|   |  |
-                                            |%%|   |  |\.'\   |   | |__|  |   |  |
-                                            |  |   |  | \  \  |===| |==|  |   |  |
-                                            |  |   |__|  \.'\ |   |_|__|  |~~~|__|
-                                            |  |===|--|   \.'\|===|~|--|%%|~~~|--|
-                                            ^--^---'--^    `-'`---^-^--^--^---'--' 
+                                                 .--.                      .---.
+                                             .---|__|              .-.     |~~~|
+                                             .--|===|--|_          |_|     |~~~|--.
+                                             |  |===|  |'\     .---!~|  .--|   |--|
+                                             |%%|   |  |.'\    |===| |--|%%|   |  |
+                                             |%%|   |  |\.'\   |   | |__|  |   |  |
+                                             |  |   |  | \  \  |===| |==|  |   |  |
+                                             |  |   |__|  \.'\ |   |_|__|  |~~~|__|
+                                             |  |===|--|   \.'\|===|~|--|%%|~~~|--|
+                                             ^--^---'--^    `-'`---^-^--^--^---'--'
     """
     print(arte)
 
@@ -61,6 +62,9 @@ def main():
             elif opcion == 2:
                 busquedaEscritores()
                 print("\n")
+            
+            elif opcion == 3:
+                ganadoresNobel()
 
             elif opcion == 0:
                 break
@@ -68,6 +72,7 @@ def main():
         except ValueError:
             # Se ejecuta si la conversión a int() falla
             print("Error: Por favor, ingrese un numero del 0 al 5. \n")
+            print("\n")
 
 
 if __name__ == "__main__":
