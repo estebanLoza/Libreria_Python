@@ -10,6 +10,27 @@ from carpetas.escritores import busquedaEscritores
 #     print(f"{mostrar} \n")
 
 
+def mostrarBanner():
+    print(" " * 50 + "*" * 50)
+    print(" " * 50 + "*" + " BIBLIOTECA SAN FE".center(48) + "*")
+    print(" " * 50 + "*" + " " * 48 + "*")
+    print(" " * 50 + "*" * 50)
+    
+    arte = r"""
+                                                .--.                      .---.
+                                            .---|__|              .-.     |~~~|
+                                            .--|===|--|_          |_|     |~~~|--.
+                                            |  |===|  |'\     .---!~|  .--|   |--|
+                                            |%%|   |  |.'\    |===| |--|%%|   |  |
+                                            |%%|   |  |\.'\   |   | |__|  |   |  |
+                                            |  |   |  | \  \  |===| |==|  |   |  |
+                                            |  |   |__|  \.'\ |   |_|__|  |~~~|__|
+                                            |  |===|--|   \.'\|===|~|--|%%|~~~|--|
+                                            ^--^---'--^    `-'`---^-^--^--^---'--' 
+    """
+    print(arte)
+
+
 def main():
     #
     # print("*" * 50)
@@ -20,11 +41,7 @@ def main():
     #
     while True:
 
-        print("*" * 50)
-        print("*" + " BIBLIOTECA SAN FE".center(48) + "*")
-        print("*" + " " * 48 + "*")
-        print("*" * 50)
-        print("\n")
+        mostrarBanner()
 
         print("1) Lista de libros disponibles")
         print("2) Buscar por Escritores")
@@ -50,7 +67,7 @@ def main():
 
         except ValueError:
             # Se ejecuta si la conversión a int() falla
-            print("Erro: Por favor, ingrese un numero del 0 al 5. \n")
+            print("Error: Por favor, ingrese un numero del 0 al 5. \n")
 
 
 if __name__ == "__main__":
