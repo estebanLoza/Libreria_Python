@@ -40,8 +40,20 @@ def LibrosCatalogo():
                 📕  Sinopsis: {info["Sinopsis"]}
                 🗓️   Año: {info["Año"]} 
                 🖼️   Portada: {info["Portada"]}
-                """)
-                 
+              """)
 
+    while True:
+        
+        try:
+            back = int(input("0 para regresar: "))
+
+            if back == 0:
+                return
+            else:
+                print("Por favor Ingrese 0 para salir \n")
+                
+        except ValueError:
+            print("Error: Por favor, ingrese un numero valido")
+        
 if __name__ == "__main__":
     LibrosCatalogo()
