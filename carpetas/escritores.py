@@ -26,7 +26,7 @@ def busquedaEscritores():
         
         print("\n")
         print(" "*50 + "*" * 50)
-        print(" "*50 + "*" + " Escribe el nombre del Escritor".center(48) + "*")
+        print(" "*50 + "*" + " Escritores 📖".center(48) + "*")
         print(" "*50 + "*" + " " * 48 + "*")
         print(" "*50 + "*" * 50)
         print("\n")  
