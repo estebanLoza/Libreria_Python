@@ -13,5 +13,5 @@ def subirLibros():
 
 
 def guardarLibro(libros):
-    with open(ARCHIVO, "w", encoding="utf-8") as f:
+    with open(ARCHIVO, "w", enconding="utf-8") as f:
         json.dump(libros, f, ensure_ascii=False, indent=4)
