@@ -4,7 +4,8 @@
 from Administradores.usurios import Usuarios
 from carpetas.libros import LibrosCatalogo
 from carpetas.escritores import busquedaEscritores
-from carpetas.ganadoresNobels import ganadoresNobel 
+from carpetas.ganadoresNobels import ganadoresNobel
+from carpetas.librosGeneros import Generos
 
 # Pruebas de imprimir el diccionario
 # for mostrar in Libros.items():
@@ -62,10 +63,11 @@ def main():
             elif opcion == 2:
                 busquedaEscritores()
                 print("\n")
-            
-            elif opcion == 3:
-                ganadoresNobel()
 
+            elif opcion == 3:
+                ganadoresNobel()            
+            elif opcion == 4:
+                Generos()
             elif opcion == 0:
                 break
 
