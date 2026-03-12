@@ -15,12 +15,6 @@ def subirLibros():
         return json.load(f)
 
 
-
-
-
-
-
-
 def ganadoresNobel():
     print(" " * 50 + "*" * 50)
     print(" " * 50 + "*" + " PREMIOS NOBEL".center(48) + "*")
