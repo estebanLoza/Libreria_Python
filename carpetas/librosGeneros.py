@@ -40,32 +40,40 @@ def Generos():
         try:
             genero = input("Escribe el genero: ").strip() 
             
-
+            # ✅ Primero validamos
             
-            for titulo, libro in libros.items():
-                if genero.lower() == libro["Genero"].lower():
-                    print(f"🔸 {titulo}")
-            
-            
-            
-            #equivocación del usuario
             if not genero:
-                raise ValueError("El campo no puede estar vacío.")
+                raise ValueError("El campo no puede estar vacío")
             if not genero.replace(" ","").isalpha():
                 raise ValueError("Solo se permiten letras.")
             
-            op = int(input("0 salir, 1 volver a escribir Genero: "))
+            # ✅ Luego Buscar
+            
+            encontrado = False
+            for titulo, info in libros.items():
+                if genero.lower() == libros["Genero"].lower():
+                    print(f"🔸 {titulo}")
+                    encontrado = True 
+                    
+            if not genero:
+                print("Ese género no existe, intenta de nuevo.")
+
+            #✅ Validar que solo sea 0 o 1
+            while True:
+                try:
+                    op = int(input("0 salir, 1 busca de nuevo: "))
+                    if op not in [0,1]:
+                        print("Solo 0 o 1")
+                        continue
+                    break
+                except ValueError:
+                    print("Solo numeros, nada de letras o caracteres.")
+                    
             if op == 0:
                 return
-            if op == 1:
-                continue
-            break
+        
         except ValueError as e:
-            print(f"Error: {e}")
-        except (KeyboardInterrupt, EOFError):
-            print("\nBúsqueda cancelada.")
-            break
-
+            print(f'Error {e}') 
                 
 
 
