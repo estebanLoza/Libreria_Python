@@ -47,8 +47,7 @@ def Generos():
             if not genero.replace(" ","").isalpha():
                 raise ValueError("Solo se permiten letras.")
             
-            # ✅ Luego Buscar
-            
+            # ✅ Luego Buscar            
             encontrado = False
             for titulo, info in libros.items():
                 if genero.lower() == libros["Genero"].lower():
