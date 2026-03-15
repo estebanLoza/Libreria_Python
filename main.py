@@ -1,12 +1,12 @@
 # Gestión de biblioteca v1.1
 
-
+from Administradores.modificaciones import main as adminMain
 from Administradores.usurios import Usuarios
 from carpetas.libros import LibrosCatalogo
 from carpetas.escritores import busquedaEscritores
 from carpetas.ganadoresNobels import ganadoresNobel
 from carpetas.librosGeneros import Generos
-from carpetas.modificaciones import admUsuarios
+
 # Pruebas de imprimir el diccionario
 # for mostrar in Libros.items():
 #     print(f"{mostrar} \n")
@@ -69,7 +69,7 @@ def main():
             elif opcion == 4:
                 Generos()
             elif opcion == 5:
-                admUsuarios()
+                adminMain()
             elif opcion == 0:
                 break
 
