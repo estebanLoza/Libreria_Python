@@ -76,7 +76,7 @@ def Usuarios():
     print("\n OPCIONES: ")
     print("     1) Buscar usuario")
     print("     2) Libros Vencidos")
-    print("     3) Libros Sin vencer")
+    print("     3) Libros proximos a vencer")
     print("     4) Multas de Usuarios")
     print("\n")
     print("-" * 84)
@@ -110,7 +110,7 @@ def Usuarios():
 
         hoy = date.today()
 
-        print("Próximos Vencimientos: \n")
+        print("Vencimientos: \n")
 
         # Juntamos todos los libros
 
@@ -131,7 +131,7 @@ def Usuarios():
                 print(f"⚠️  HOY VENCE -> {nombre} |  {libro['Titulo']}")
             else:
                 print(
-                    f"  {nombre} -> {libro['Titulo']}  |  Vence: {fecha}")
+                    f"  {nombre} -> {libro['Titulo']}  |  Venció: {fecha}")
 
     # Opción de fechas aun sin expirar 3
     elif opcion == 3:
