@@ -51,7 +51,8 @@ def ganadoresNobel():
         print(f"    * Motivo: {info["motivo"]}")
         contador += 1
     print("\n")
-
+    
+    # Ganador del premio por años especifico
     while True:
         try:
             back = int(input("0 regresar o 1 para buscar año de ganador: "))
