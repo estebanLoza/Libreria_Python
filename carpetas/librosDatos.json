@@ -1,106 +1,114 @@
 {
-  "La Tregua": {
-    "Autor": "Mario Benedetti",
-    "Sinopsis": "Un diario intimo sobre la rutina, el amor inesperado y la melancolia de la vida cotidiana",
-    "Genero": "Romance",
-    "ISBN": 9780679760955,
-    "Año": 1960,
-    "Portada": "https://m.media-amazon.com/images/I/61xcUlIJ24L._AC_UF894,1000_QL80_.jpg"
-  },
-  "Las Intermitencias De La Muerte": {
-    "Autor": "Jose Saramago",
-    "Sinopsis": "Una reflexión alegórica donde la muerte deja de actuar en un país, generando caos y dilemas éticos",
-    "Genero": "Ficción Filosófica",
-    "ISBN": 9783455650402,
-    "Año": 2005,
-    "Portada": "https://m.media-amazon.com/images/I/81Vx3UjIbZL._SY522_.jpg"
-  },
-  "El Coronel No Tiene Quien Le Escriba": {
-    "Autor": "Gabriel García Márquez",
-    "Sinopsis": "La historia de un coronel retirado que espera una pensión que nunca llega, en medio de la pobreza",
-    "Genero": "Realismo Mágico",
-    "ISBN": 9783462027570,
-    "Año": 1961,
-    "Portada": "https://m.media-amazon.com/images/I/81Vx3UjIbZL._SY522_.jpg"
-  },
-  "El Aleph": {
-    "Autor": "Jorge Luis Borges",
-    "Sinopsis": "Una colección de cuentos que exploran el infinito, la memoria, los laberintos y la literatura",
-    "Genero": "Cuento",
-    "ISBN": 9788490629420,
-    "Año": 1949,
-    "Portada": "https://m.media-amazon.com/images/I/610Upk1dApL._SL1500_.jpg"
-  },
-  "Ficciones": {
-    "Autor": "Jorge Luis Borges",
-    "Sinopsis": "Una serie de cuentos filosóficos y metafísicos que desafían la lógica y la realidad",
-    "Genero": "Cuento",
-    "ISBN": 9788499089508,
-    "Año": 1944,
-    "Portada": "https://m.media-amazon.com/images/I/31oAt-439BL._SY445_SX342_PQ54_.jpg"
-  },
-  "Hijo De Satanás": {
-    "Autor": "Charles Bukowski",
-    "Sinopsis": "Un conjunto de relatos crudos y viscerales que abordan la marginalidad, el alcohol y la crudeza humana.",
-    "Genero": "Cuento",
-    "ISBN": 9788433914675,
-    "Año": 1985,
-    "Portada": "https://m.media-amazon.com/images/I/41J1ecfPcPL._SY445_SX342_PQ54_.jpg"
-  },
-  "Caín": {
-    "Autor": "José Saramago",
-    "Sinopsis": "Una revisión irónica y crítica de episodios bíblicos narrados desde la perspectiva del personaje Caín.",
-    "Genero": "Ficción Histórica",
-    "ISBN": 9788490628799,
-    "Año": 2009,
-    "Portada": "https://m.media-amazon.com/images/I/71OwtzhTctL._SY385_.jpg"
-  },
-  "Rayuela": {
-    "Autor": "Julio Cortázar",
-    "Sinopsis": "Una novela experimental que puede leerse de distintas formas, explorando el amor, el arte y la existencia",
-    "Genero": "Ficción Filosófica",
-    "ISBN": 9788401425318,
-    "Año": 1963,
-    "Portada": "https://m.media-amazon.com/images/I/41BYQk8tD-L._SX342_SY445_PQ54_.jpg"
-  },
-  "El Amor En Tiempos De Cólera": {
-    "Autor": "Gabriel García Márquez",
-    "Sinopsis": "Una historia de amor duradero y paciente entre dos almas separadas por décadas",
-    "Genero": "Romance",
-    "ISBN": 9780140255782,
-    "Año": 1985,
-    "Portada": "https://m.media-amazon.com/images/I/81YPlYG-b9L._SY385_.jpg"
-  },
-  "La Borra De Café": {
-    "Autor": "Mario Benedetti",
-    "Sinopsis": "Una novela nostálgica sobre la infancia, la memoria y el paso del tiempo en Montevideo",
-    "Genero": "Narrativa",
-    "ISBN": 9788490626740,
-    "Año": 1992,
-    "Portada": "https://m.media-amazon.com/images/I/51nK8omyn9L._SY445_SX342_PQ54_.jpg"
-  },
-  "Mi Nombre Es Emilia Del Valle": {
-    "Autor": "Isabel Allende",
-    "Sinopsis": "Una historia sobre identidad, lucha interior y búsqueda personal.",
-    "Genero": "Ficción Histórica",
-    "ISBN": 9798890983657,
-    "Año": 2025,
-    "Portada": "https://m.media-amazon.com/images/I/4115OME2ZgL._SY445_SX342_PQ54_.jpg"
-  },
-  "Ensayo Sobre La Lucidez": {
-    "Autor": "José Saramago",
-    "Sinopsis": "Una metáfora política sobre una sociedad donde la mayoría vota en blanco como protesta silenciosa.",
-    "Genero": "Ficción Filosófica",
-    "ISBN": 9781843432326,
-    "Año": 2004,
-    "Portada": "https://m.media-amazon.com/images/I/41VrGlEF+TL._SY445_SX342_PQ54_.jpg"
-  },
-  "El Principito": {
-    "Autor": "Antoine De Saint Exupery",
-    "Sinopsis": "Narra la historia de un niño principe que vive en un pequeño asteroide y llega a la tierra",
-    "Genero": "Fábula",
-    "ISBN": 9786073803762,
-    "Año": 1943,
-    "Portada": "https://m.media-amazon.com/images/I/811kjwhnjcS._SY466_.jpg"
-  }
+    "La Tregua": {
+        "Autor": "Mario Benedetti",
+        "Sinopsis": "Un diario intimo sobre la rutina, el amor inesperado y la melancolia de la vida cotidiana",
+        "Genero": "Romance",
+        "ISBN": 9780679760955,
+        "Año": 1960,
+        "Portada": "https://m.media-amazon.com/images/I/61xcUlIJ24L._AC_UF894,1000_QL80_.jpg"
+    },
+    "Las Intermitencias De La Muerte": {
+        "Autor": "Jose Saramago",
+        "Sinopsis": "Una reflexión alegórica donde la muerte deja de actuar en un país, generando caos y dilemas éticos",
+        "Genero": "Ficción Filosófica",
+        "ISBN": 9783455650402,
+        "Año": 2005,
+        "Portada": "https://m.media-amazon.com/images/I/81Vx3UjIbZL._SY522_.jpg"
+    },
+    "El Coronel No Tiene Quien Le Escriba": {
+        "Autor": "Gabriel García Márquez",
+        "Sinopsis": "La historia de un coronel retirado que espera una pensión que nunca llega, en medio de la pobreza",
+        "Genero": "Realismo Mágico",
+        "ISBN": 9783462027570,
+        "Año": 1961,
+        "Portada": "https://m.media-amazon.com/images/I/81Vx3UjIbZL._SY522_.jpg"
+    },
+    "El Aleph": {
+        "Autor": "Jorge Luis Borges",
+        "Sinopsis": "Una colección de cuentos que exploran el infinito, la memoria, los laberintos y la literatura",
+        "Genero": "Cuento",
+        "ISBN": 9788490629420,
+        "Año": 1949,
+        "Portada": "https://m.media-amazon.com/images/I/610Upk1dApL._SL1500_.jpg"
+    },
+    "Ficciones": {
+        "Autor": "Jorge Luis Borges",
+        "Sinopsis": "Una serie de cuentos filosóficos y metafísicos que desafían la lógica y la realidad",
+        "Genero": "Cuento",
+        "ISBN": 9788499089508,
+        "Año": 1944,
+        "Portada": "https://m.media-amazon.com/images/I/31oAt-439BL._SY445_SX342_PQ54_.jpg"
+    },
+    "Hijo De Satanás": {
+        "Autor": "Charles Bukowski",
+        "Sinopsis": "Un conjunto de relatos crudos y viscerales que abordan la marginalidad, el alcohol y la crudeza humana.",
+        "Genero": "Cuento",
+        "ISBN": 9788433914675,
+        "Año": 1985,
+        "Portada": "https://m.media-amazon.com/images/I/41J1ecfPcPL._SY445_SX342_PQ54_.jpg"
+    },
+    "Caín": {
+        "Autor": "José Saramago",
+        "Sinopsis": "Una revisión irónica y crítica de episodios bíblicos narrados desde la perspectiva del personaje Caín.",
+        "Genero": "Ficción Histórica",
+        "ISBN": 9788490628799,
+        "Año": 2009,
+        "Portada": "https://m.media-amazon.com/images/I/71OwtzhTctL._SY385_.jpg"
+    },
+    "Rayuela": {
+        "Autor": "Julio Cortázar",
+        "Sinopsis": "Una novela experimental que puede leerse de distintas formas, explorando el amor, el arte y la existencia",
+        "Genero": "Ficción Filosófica",
+        "ISBN": 9788401425318,
+        "Año": 1963,
+        "Portada": "https://m.media-amazon.com/images/I/41BYQk8tD-L._SX342_SY445_PQ54_.jpg"
+    },
+    "El Amor En Tiempos De Cólera": {
+        "Autor": "Gabriel García Márquez",
+        "Sinopsis": "Una historia de amor duradero y paciente entre dos almas separadas por décadas",
+        "Genero": "Romance",
+        "ISBN": 9780140255782,
+        "Año": 1985,
+        "Portada": "https://m.media-amazon.com/images/I/81YPlYG-b9L._SY385_.jpg"
+    },
+    "La Borra De Café": {
+        "Autor": "Mario Benedetti",
+        "Sinopsis": "Una novela nostálgica sobre la infancia, la memoria y el paso del tiempo en Montevideo",
+        "Genero": "Narrativa",
+        "ISBN": 9788490626740,
+        "Año": 1992,
+        "Portada": "https://m.media-amazon.com/images/I/51nK8omyn9L._SY445_SX342_PQ54_.jpg"
+    },
+    "Mi Nombre Es Emilia Del Valle": {
+        "Autor": "Isabel Allende",
+        "Sinopsis": "Una historia sobre identidad, lucha interior y búsqueda personal.",
+        "Genero": "Ficción Histórica",
+        "ISBN": 9798890983657,
+        "Año": 2025,
+        "Portada": "https://m.media-amazon.com/images/I/4115OME2ZgL._SY445_SX342_PQ54_.jpg"
+    },
+    "Ensayo Sobre La Lucidez": {
+        "Autor": "José Saramago",
+        "Sinopsis": "Una metáfora política sobre una sociedad donde la mayoría vota en blanco como protesta silenciosa.",
+        "Genero": "Ficción Filosófica",
+        "ISBN": 9781843432326,
+        "Año": 2004,
+        "Portada": "https://m.media-amazon.com/images/I/41VrGlEF+TL._SY445_SX342_PQ54_.jpg"
+    },
+    "El Principito": {
+        "Autor": "Antoine De Saint Exupery",
+        "Sinopsis": "Narra la historia de un niño principe que vive en un pequeño asteroide y llega a la tierra",
+        "Genero": "Fábula",
+        "ISBN": 9786073803762,
+        "Año": 1943,
+        "Portada": "https://m.media-amazon.com/images/I/811kjwhnjcS._SY466_.jpg"
+    },
+    "La noche de los feos": {
+        "Autor": "Mario Benedetti",
+        "Sinopsis": "\"La noche de los feos\" (1968), de Mario Benedetti, narra el encuentro en un cine entre un hombre y una mujer marcados por deformidades faciales, unidos por su soledad y rechazo social. Deciden imitar en la oscuridad de un departamento, donde tras acariciarse las cicatrices, aceptan su fealdad, hallando consuelo y una forma de conexión humana genuina, lejos de la superficialidad\"",
+        "Genero": "Narrativa",
+        "ISBN": "9789568916606",
+        "Año": 1968,
+        "Portada": "https://m.media-amazon.com/images/I/91ewmMif+FL._SL1500_.jpg"
+    }
 }
