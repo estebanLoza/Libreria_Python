@@ -26,43 +26,54 @@ def Generos():
     print(" "*50 + "*" * 50)
     print("\n")
 
-    print("1️⃣ -Romance")
-    print("2️⃣ -Realismo Mágico")
-    print("3️⃣ -Ficción Filosófica")
-    print("4️⃣ -Cuento")
-    print("5️⃣ -Ficción Histórica")
-    print("6️⃣ -Fábula")
-    print("7️⃣ -Narrativa")
-
-
-    # No permitirá campos vacíos y otros caracteres
+      # No permitirá campos vacíos y otros caracteres
     while True:
+        print("\n")
+        print("1️⃣ -Romance")
+        print("2️⃣ -Realismo Mágico")
+        print("3️⃣ -Ficción Filosófica")
+        print("4️⃣ -Cuento")
+        print("5️⃣ -Ficción Histórica")
+        print("6️⃣ -Fábula")
+        print("7️⃣ -Narrativa")
+        print("  -(0) para volver")
+
+
+
         try:
-            genero = input("Escribe el genero: ").strip() 
+            genero = input("Escribe el genero (0 para volver): ").strip() 
+           
             
-            # ✅ Primero validamos
-            
+            #✅ Primero validamos si quiere estar aquí
+            if genero == "0": 
+                return
+
+
+
+            # ✅ Primero validamos 
             if not genero:
                 raise ValueError("El campo no puede estar vacío")
             if not genero.replace(" ","").isalpha():
                 raise ValueError("Solo se permiten letras.")
             
+
             # ✅ Luego Buscar            
             encontrado = False
             for titulo, info in libros.items():
-                if genero.lower() == libros["Genero"].lower():
+                if genero.lower() == info["Genero"].lower():
                     print(f"🔸 {titulo}")
                     encontrado = True 
                     
             if not genero:
                 print("Ese género no existe, intenta de nuevo.")
 
+
             #✅ Validar que solo sea 0 o 1
             while True:
                 try:
                     op = int(input("0 salir, 1 busca de nuevo: "))
                     if op not in [0,1]:
-                        print("Solo 0 o 1")
+                        print("Solo 0 o 1") 
                         continue
                     break
                 except ValueError:
@@ -70,7 +81,7 @@ def Generos():
                     
             if op == 0:
                 return
-        
+      
         except ValueError as e:
             print(f'Error {e}') 
                 
