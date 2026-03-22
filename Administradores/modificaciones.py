@@ -4,8 +4,16 @@ import json  # importación de los datos creados en json
 import os  # Para poder acceder al sistema y así guardar los datos cada vez que inicie
 import sys
 
+from Administradores.usurios import Usuarios
+
+
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+
+
 # Apunta al JSON donde están todos los libros
-ARCHIVO = os.path.join(os.path.dirname(__file__), "libros.json")
+ARCHIVO = os.path.join(os.path.dirname(os.path.dirname(__file__)), "carpetas", "librosDatos.json")
+
+
 
 # Bases de datos
 
@@ -50,9 +58,9 @@ def agregarLibros():
 
     }
     guardarLibro(libros)
-    print(f"LISTO '{titulo}' agregado correctamente")
+    print(f"\nLISTO '{titulo}' agregado correctamente\n")
 
-
+#Eliminación de libro
 def eliminarLibro():
     libros = subirLibros()
 
@@ -60,33 +68,36 @@ def eliminarLibro():
     print("Libros disponibles: ")
     for i, titulo in enumerate(libros, 1):
         print(f" {i} {titulo}")
+    
 
-    titulo = input("\nEscribe el titulo exacto a elimniar: ").strip()
-
-    if titulo not in libros:
-        print(f"NO  '{titulo}' no encontrado")
+    titulo = input("\nEscribe el titulo exacto a eliminar (0 para regresar): ")
+    #🔸Opción para regresar
+    if titulo == 0:
         return
+    
+    if titulo not in libros: 
+        print(f"❌ '{titulo}' no encontrado\n")
+        return
+    confirmar = input(f"¿Seguro que quieres eliminar '{titulo}'? (s/n): ")
 
-    confirmar = input(f"¿Seguro que quieres eliminar '{titulo}'?  (s/n): ")
     if confirmar == "s":
         del libros[titulo]
         guardarLibro(libros)
-        print(f"SI  '{titulo} eliminado correctamente.")
-    else:
-        print("Operación cancelada")
+        print(f"✅ '{titulo}' eliminado correctamente.\n")
+    elif confirmar == "n":
+        print("Operación cancelada.\n")
 
 
-# ----- Menú admin -------------------------
 
 
-def menuAdmin(admUser):
+def logo(admUser):
     print(" " * 50 + "*" * 50)
     print(" " * 50 + "*" + "ADMISNISTRACIÓN DE LIBROS".center(48) + "*")
     print(" " * 50 + "*" + " " * 48 + "*")
     print(" " * 50 + "*" * 50)
 
     print(f"""
-           Bienvenido {admUsuarios}
+           Bienvenido {admUser}
 
            En esta sección solo podras hacer el uso de modificaciones de
            agregación y elimninación de libros.
@@ -94,20 +105,45 @@ def menuAdmin(admUser):
           """)
     print("1) Agregar libro")
     print("2) Eliminar libro")
+    print("3) Vigencia de libros (Usuarios)")
+    print("0) Cerrando sesión")
+    
 
+
+
+ 
+
+
+
+
+
+
+
+# ----- Menú admin -------------------------
+
+
+def menuAdmin(admUser):
     while True:
+        logo(admUser)
         try:
             op = int(input("\n Opción: "))
 
             if op == 1:
                 agregarLibros()
+                input("\nPresiona Enter para continuar...")
             elif op == 2:
                 eliminarLibro()
+                input("\nPresiona Enter para continuar...")
+            elif op == 3: 
+                Usuarios()
+                input("\nPresiona Enter para continuar...") #Tiempo de espera.
             elif op == 0:
                 print("ADIOS Cerrando sesión...")
                 break
             else:
                 print("Opción invalida.")
+
+
 
         except ValueError:
             print("Error: ingresa solo números.")
