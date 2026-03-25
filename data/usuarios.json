@@ -1,0 +1,51 @@
+{
+  "Esteban Hernandez": {
+    "ID": 10001,
+    "Libros Prestados": [
+      { "Titulo": "La Tregua", "Fecha Vencimiento": "2026-01-26" },
+      {
+        "Titulo": "Las Intermitencias De La Muerte",
+        "Fecha Vencimiento": "2026-04-01"
+      }
+    ]
+  },
+  "Juan Martinez": {
+    "ID": 10002,
+    "Libros Prestados": [
+      { "Titulo": "Rayuela", "Fecha Vencimiento": "2026-01-12" },
+      {
+        "Titulo": "El Amor En Tiempos De Colera",
+        "Fecha Vencimiento": "2026-01-21"
+      }
+    ]
+  },
+  "Alfredo García": {
+    "ID": 10003,
+    "Libros Prestados": [
+      {
+        "Titulo": "Mi Nombre Es Emilia Del Valle",
+        "Fecha Vencimiento": "2026-02-01"
+      }
+    ]
+  },
+  "Alfredo Valenzuela": {
+    "ID": 10004,
+    "Libros Prestados": [
+      {
+        "Titulo": "Ensayo Sobre La Lucidez",
+        "Fecha Vencimiento": "2026-02-12"
+      },
+      { "Titulo": "El Principito", "Fecha Vencimiento": "2026-02-26" },
+      { "Titulo": "Ficciones", "Fecha Vencimiento": "2026-03-15" }
+    ]
+  },
+  "Mario Aguilar": {
+    "ID": 10005,
+    "Libros Prestados": [
+      {
+        "Titulo": "Memoria de Mis Putas Tristes",
+        "Fecha Vencimiento": "2026-03-01"
+      }
+    ]
+  }
+}

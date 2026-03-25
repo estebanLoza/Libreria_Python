@@ -1,0 +1,604 @@
+{
+  "Sully Prudhomme": {
+    "año": 1901,
+    "nacionalidad": "Francés 🇫🇷",
+    "motivo": "En reconocimiento especial a su producción poética, que da evidencia de alto idealismo, perfección artística y una rara combinación de las cualidades del corazón y el intelecto."
+  },
+  "Theodor Mommsen": {
+    "año": 1902,
+    "nacionalidad": "Alemán 🇩🇪",
+    "motivo": "El más grande maestro viviente del arte de la escritura histórica, con referencia especial a su monumental obra Historia de Roma."
+  },
+  "Bjørnstjerne Bjørnson": {
+    "año": 1903,
+    "nacionalidad": "Noruego 🇳🇴",
+    "motivo": "En homenaje a su noble, magnífica y versátil poesía, que siempre se ha distinguido por su frescura de inspiración y por la rara pureza de su espíritu."
+  },
+  "Frédéric Mistral": {
+    "año": 1904,
+    "nacionalidad": "Francés 🇫🇷",
+    "motivo": "En reconocimiento de la fresca originalidad y la verdadera inspiración de su producción poética."
+  },
+  "José Echegaray": {
+    "año": 1904,
+    "nacionalidad": "Español 🇪🇸",
+    "motivo": "En reconocimiento de las numerosas y brillantes composiciones que han revivido de una manera individual y original las grandes tradiciones del drama español."
+  },
+  "Henryk Sienkiewicz": {
+    "año": 1905,
+    "nacionalidad": "Polaco 🇵🇱",
+    "motivo": "Por sus destacados méritos como escritor épico."
+  },
+  "Giosuè Carducci": {
+    "año": 1906,
+    "nacionalidad": "Italiano 🇮🇹",
+    "motivo": "No solo en consideración de sus profundos conocimientos y estudios críticos, sino también, y especialmente como tributo a la energía creativa, la frescura de estilo y la fuerza lírica que caracterizan sus obras maestras poéticas."
+  },
+  "Rudyard Kipling": {
+    "año": 1907,
+    "nacionalidad": "Británico 🇬🇧",
+    "motivo": "En consideración del poder de observación, la originalidad de imaginación, la virilidad de ideas y el notable talento para la narración que caracterizan las creaciones de este mundialmente famoso autor."
+  },
+  "Rudolf Eucken": {
+    "año": 1908,
+    "nacionalidad": "Alemán 🇩🇪",
+    "motivo": "En reconocimiento de su seria búsqueda de la verdad, su poder penetrante de pensamiento, su amplia visión y el calor y la fuerza en su presentación."
+  },
+  "Selma Lagerlöf": {
+    "año": 1909,
+    "nacionalidad": "Sueca 🇸🇪",
+    "motivo": "En apreciación del idealismo elevado, la vívida imaginación y la percepción espiritual que caracterizan sus escritos."
+  },
+  "Paul Heyse": {
+    "año": 1910,
+    "nacionalidad": "Alemán 🇩🇪",
+    "motivo": "Como tributo al arte consumado, impregnado de idealismo, que ha demostrado durante su larga carrera productiva como poeta lírico, dramaturgo, novelista y escritor de cuentos mundialmente famoso."
+  },
+  "Maurice Maeterlinck": {
+    "año": 1911,
+    "nacionalidad": "Belga 🇧🇪",
+    "motivo": "En apreciación de sus múltiples actividades literarias, y especialmente de sus obras dramáticas, que se distinguen por una riqueza de imaginación y por una fantasía poética."
+  },
+  "Gerhart Hauptmann": {
+    "año": 1912,
+    "nacionalidad": "Alemán 🇩🇪",
+    "motivo": "En reconocimiento primordial de su fructífera, variada y sobresaliente producción en el reino del arte dramático."
+  },
+  "Rabindranath Tagore": {
+    "año": 1913,
+    "nacionalidad": "Indio 🇮🇳",
+    "motivo": "Por razón de su profundamente sensible, fresca y hermosa poesía, por la que, con considerable habilidad, ha hecho su propio pensamiento poético, expresado en sus propias palabras en inglés, parte de la literatura de Occidente."
+  },
+  "Romain Rolland": {
+    "año": 1915,
+    "nacionalidad": "Francés 🇫🇷",
+    "motivo": "Como tributo al elevado idealismo de su producción literaria y a la simpatía y amor por la verdad con los que ha descrito diferentes tipos de seres humanos."
+  },
+  "Verner von Heidenstam": {
+    "año": 1916,
+    "nacionalidad": "Sueco 🇸🇪",
+    "motivo": "En reconocimiento de su significancia como el representante más importante de una nueva era en nuestra literatura."
+  },
+  "Karl Gjellerup": {
+    "año": 1917,
+    "nacionalidad": "Danés 🇩🇰",
+    "motivo": "Por su variada y rica poesía, que está inspirada por ideales elevados."
+  },
+  "Henrik Pontoppidan": {
+    "año": 1917,
+    "nacionalidad": "Danés 🇩🇰",
+    "motivo": "Por sus descripciones auténticas de la vida presente de Dinamarca."
+  },
+  "Carl Spitteler": {
+    "año": 1919,
+    "nacionalidad": "Suizo 🇨🇭",
+    "motivo": "En reconocimiento especial de su épica magnífica, Olimpian Spring."
+  },
+  "Knut Hamsun": {
+    "año": 1920,
+    "nacionalidad": "Noruego 🇳🇴",
+    "motivo": "Por su obra monumental Markens grøde."
+  },
+  "Anatole France": {
+    "año": 1921,
+    "nacionalidad": "Francés 🇫🇷",
+    "motivo": "En reconocimiento de sus brillantes logros literarios, caracterizados por una nobleza de estilo, una profunda simpatía humana, gracia y un verdadero temperamento galo."
+  },
+  "Jacinto Benavente": {
+    "año": 1922,
+    "nacionalidad": "Español 🇪🇸",
+    "motivo": "Por la manera feliz en que ha continuado las ilustres tradiciones del drama español."
+  },
+  "W.B. Yeats": {
+    "año": 1923,
+    "nacionalidad": "Irlandés 🇮🇪",
+    "motivo": "Por su siempre inspirada poesía, que en una forma altamente artística da expresión al espíritu de toda una nación."
+  },
+  "Władysław Reymont": {
+    "año": 1924,
+    "nacionalidad": "Polaco 🇵🇱",
+    "motivo": "Por su gran epopeya nacional, Los campesinos."
+  },
+  "George Bernard Shaw": {
+    "año": 1925,
+    "nacionalidad": "Irlandés 🇮🇪",
+    "motivo": "Por su obra marcada por el idealismo y la humanidad, cuya crítica estimulante ha estado impregnada frecuentemente de una singular belleza poética."
+  },
+  "Grazia Deledda": {
+    "año": 1926,
+    "nacionalidad": "Italiana 🇮🇹",
+    "motivo": "Por sus escritos idealistas que con plasticidad representan la vida en su isla nativa y con profundidad tratan problemas humanos en general."
+  },
+  "Henri Bergson": {
+    "año": 1927,
+    "nacionalidad": "Francés 🇫🇷",
+    "motivo": "En reconocimiento de sus ricas y vivificantes ideas y de la brillante habilidad con la que han sido presentadas."
+  },
+  "Sigrid Undset": {
+    "año": 1928,
+    "nacionalidad": "Noruega 🇳🇴",
+    "motivo": "Principalmente por sus poderosas descripciones de la vida del norte durante la Edad Media."
+  },
+  "Thomas Mann": {
+    "año": 1929,
+    "nacionalidad": "Alemán 🇩🇪",
+    "motivo": "Principalmente por su gran novela Los Buddenbrook, que ha ganado reconocimiento creciente como uno de los clásicos de la literatura contemporánea."
+  },
+  "Sinclair Lewis": {
+    "año": 1930,
+    "nacionalidad": "Estadounidense 🇺🇸",
+    "motivo": "Por su arte vigoroso y gráfico de descripción y su capacidad de crear, con ingenio y humor, personajes nuevos."
+  },
+  "Erik Axel Karlfeldt": {
+    "año": 1931,
+    "nacionalidad": "Sueco 🇸🇪",
+    "motivo": "Por la poesía de Erik Axel Karlfeldt."
+  },
+  "John Galsworthy": {
+    "año": 1932,
+    "nacionalidad": "Británico 🇬🇧",
+    "motivo": "Por su distinguido arte de narración que alcanza su punto más alto en La saga de los Forsyte."
+  },
+  "Ivan Bunin": {
+    "año": 1933,
+    "nacionalidad": "Ruso 🇷🇺",
+    "motivo": "Por el estricto artesanato con que ha desarrollado las tradiciones de la prosa clásica rusa."
+  },
+  "Luigi Pirandello": {
+    "año": 1934,
+    "nacionalidad": "Italiano 🇮🇹",
+    "motivo": "Por su audaz y brillante renovación del arte dramático y teatral."
+  },
+  "Eugene O'Neill": {
+    "año": 1936,
+    "nacionalidad": "Estadounidense 🇺🇸",
+    "motivo": "Por el poder, la honestidad y el profundo afecto de sus obras dramáticas, que encarnan un original concepto de la tragedia."
+  },
+  "Roger Martin du Gard": {
+    "año": 1937,
+    "nacionalidad": "Francés 🇫🇷",
+    "motivo": "Por la fuerza artística y la verdad con la que ha representado el conflicto humano así como algunos aspectos fundamentales de la vida contemporánea en su serie de novelas Los Thibault."
+  },
+  "Pearl Buck": {
+    "año": 1938,
+    "nacionalidad": "Estadounidense 🇺🇸",
+    "motivo": "Por sus ricas y genuinamente épicas descripciones de la vida campesina en China y por sus obras maestras biográficas."
+  },
+  "Frans Eemil Sillanpää": {
+    "año": 1939,
+    "nacionalidad": "Finlandés 🇫🇮",
+    "motivo": "Por su profunda comprensión de la naturaleza de su país y de los seres humanos y su arte exquisito con el que ha representado en sus obras su vida y su relación con la naturaleza."
+  },
+  "Johannes V. Jensen": {
+    "año": 1944,
+    "nacionalidad": "Danés 🇩🇰",
+    "motivo": "Por la rara fuerza y fertilidad de su imaginación poética con un amplio alcance intelectual y un estilo audaz y creativo."
+  },
+  "Gabriela Mistral": {
+    "año": 1945,
+    "nacionalidad": "Chilena 🇨🇱",
+    "motivo": "Por su poesía lírica que, inspirada por poderosas emociones, ha hecho de su nombre un símbolo de las aspiraciones idealistas de todo el mundo latinoamericano."
+  },
+  "Hermann Hesse": {
+    "año": 1946,
+    "nacionalidad": "Alemán-Suizo 🇩🇪🇨🇭",
+    "motivo": "Por su escritura inspirada que, al tiempo que crece en audacia y penetración, ejemplifica los ideales humanistas clásicos y las altas cualidades de estilo."
+  },
+  "André Gide": {
+    "año": 1947,
+    "nacionalidad": "Francés 🇫🇷",
+    "motivo": "Por sus escritos comprensivos y artísticamente significativos, en los que los problemas y condiciones humanas han sido presentados con audaz amor a la verdad y penetración psicológica."
+  },
+  "T.S. Eliot": {
+    "año": 1948,
+    "nacionalidad": "Británico-Estadounidense 🇬🇧🇺🇸",
+    "motivo": "Por su sobresaliente contribución pionera a la poesía presente."
+  },
+  "William Faulkner": {
+    "año": 1949,
+    "nacionalidad": "Estadounidense 🇺🇸",
+    "motivo": "Por su poderosa y artísticamente única contribución a la novela americana moderna."
+  },
+  "Bertrand Russell": {
+    "año": 1950,
+    "nacionalidad": "Británico 🇬🇧",
+    "motivo": "En reconocimiento de sus variados y significativos escritos en los que defiende los ideales humanitarios y la libertad de pensamiento."
+  },
+  "Pär Lagerkvist": {
+    "año": 1951,
+    "nacionalidad": "Sueco 🇸🇪",
+    "motivo": "Por la fuerza artística y la independencia genuina de su visión en su búsqueda de respuestas a las eternas preguntas que confronta la humanidad."
+  },
+  "François Mauriac": {
+    "año": 1952,
+    "nacionalidad": "Francés 🇫🇷",
+    "motivo": "Por el penetrante análisis espiritual y la intensidad artística con la que ha interpretado en la forma de la novela el drama de la vida humana."
+  },
+  "Winston Churchill": {
+    "año": 1953,
+    "nacionalidad": "Británico 🇬🇧",
+    "motivo": "Por su maestría de la descripción histórica y biográfica así como por la brillante oratoria en la defensa de los valores humanos exaltados."
+  },
+  "Ernest Hemingway": {
+    "año": 1954,
+    "nacionalidad": "Estadounidense 🇺🇸",
+    "motivo": "Por su dominio del arte de la narrativa moderna, demostrado más recientemente en El viejo y el mar, y por la influencia que ha ejercido en el estilo contemporáneo."
+  },
+  "Halldór Laxness": {
+    "año": 1955,
+    "nacionalidad": "Islandés 🇮🇸",
+    "motivo": "Por su vívida fuerza épica que ha renovado el gran arte narrativo de Islandia."
+  },
+  "Juan Ramón Jiménez": {
+    "año": 1956,
+    "nacionalidad": "Español 🇪🇸",
+    "motivo": "Por su poesía lírica, que en español constituye un ejemplo de alto espíritu y artisticidad pura."
+  },
+  "Albert Camus": {
+    "año": 1957,
+    "nacionalidad": "Francés-Argelino 🇫🇷🇩🇿",
+    "motivo": "Por su importante producción literaria, que con un serio humanismo ilumina los problemas de la conciencia humana en nuestros tiempos."
+  },
+  "Boris Pasternak": {
+    "año": 1958,
+    "nacionalidad": "Soviético 🇷🇺",
+    "motivo": "Por su logro importante tanto en la poesía contemporánea lírica como en el campo de la gran tradición narrativa rusa.",
+    "nota": "Declinó el premio bajo presión del gobierno soviético."
+  },
+  "Salvatore Quasimodo": {
+    "año": 1959,
+    "nacionalidad": "Italiano 🇮🇹",
+    "motivo": "Por su poesía lírica, que con ardiente clasicismo expresa las trágicas experiencias de la vida en nuestros tiempos."
+  },
+  "Saint-John Perse": {
+    "año": 1960,
+    "nacionalidad": "Francés 🇫🇷",
+    "motivo": "Por la soberanía y profunda imaginación simbólica de su poesía que de una manera visionaria refleja las condiciones de nuestro tiempo."
+  },
+  "Ivo Andrić": {
+    "año": 1961,
+    "nacionalidad": "Yugoslavo 🇧🇦",
+    "motivo": "Por la fuerza épica con la que ha trazado temas y retratado destinos humanos del historial de su país."
+  },
+  "John Steinbeck": {
+    "año": 1962,
+    "nacionalidad": "Estadounidense 🇺🇸",
+    "motivo": "Por sus escritos realistas y de imaginación, que combinan el humor simpático y la percepción social aguda."
+  },
+  "Giorgos Seferis": {
+    "año": 1963,
+    "nacionalidad": "Griego 🇬🇷",
+    "motivo": "Por su poesía lírica excelente, inspirada por un profundo sentimiento para el mundo helénico de la cultura."
+  },
+  "Jean-Paul Sartre": {
+    "año": 1964,
+    "nacionalidad": "Francés 🇫🇷",
+    "motivo": "Por su obra rica en ideas y llena del espíritu de libertad y la búsqueda de la verdad que ha ejercido una influencia de largo alcance en nuestra era.",
+    "nota": "Declinó el premio voluntariamente."
+  },
+  "Mikhail Sholokhov": {
+    "año": 1965,
+    "nacionalidad": "Soviético 🇷🇺",
+    "motivo": "Por la fuerza artística y la integridad con la que, en su épica del Don, ha dado expresión a una fase histórica en la vida del pueblo ruso."
+  },
+  "Shmuel Agnon": {
+    "año": 1966,
+    "nacionalidad": "Israelí 🇮🇱",
+    "motivo": "Por su profundamente característica narración artística con motivos del mundo judío."
+  },
+  "Nelly Sachs": {
+    "año": 1966,
+    "nacionalidad": "Alemana-Sueca 🇩🇪🇸🇪",
+    "motivo": "Por su sobresaliente escritura lírica y dramática, que interpreta el destino de Israel con fuerza conmovedora."
+  },
+  "Miguel Ángel Asturias": {
+    "año": 1967,
+    "nacionalidad": "Guatemalteco 🇬🇹",
+    "motivo": "Por sus logros literarios vívidos, arraigados profundamente en los rasgos nacionales y las tradiciones de los pueblos indígenas de América Latina."
+  },
+  "Yasunari Kawabata": {
+    "año": 1968,
+    "nacionalidad": "Japonés 🇯🇵",
+    "motivo": "Por su habilidad narrativa, que con gran sensibilidad expresa la esencia de la mente japonesa."
+  },
+  "Samuel Beckett": {
+    "año": 1969,
+    "nacionalidad": "Irlandés 🇮🇪",
+    "motivo": "Por su escritura, que en nuevas formas para la novela y el drama adquiere su elevación en la destitución del hombre moderno."
+  },
+  "Aleksandr Solzhenitsyn": {
+    "año": 1970,
+    "nacionalidad": "Soviético 🇷🇺",
+    "motivo": "Por la fuerza ética con la que ha seguido las tradiciones indispensables de la literatura rusa."
+  },
+  "Pablo Neruda": {
+    "año": 1971,
+    "nacionalidad": "Chileno 🇨🇱",
+    "motivo": "Por una poesía que con la acción de una fuerza elemental da vida al destino y los sueños de un continente."
+  },
+  "Heinrich Böll": {
+    "año": 1972,
+    "nacionalidad": "Alemán 🇩🇪",
+    "motivo": "Por su escritura que a través de su combinación de una amplia perspectiva en el tiempo con una habilidad caracterizadora ha contribuido a la renovación de la literatura alemana."
+  },
+  "Patrick White": {
+    "año": 1973,
+    "nacionalidad": "Australiano 🇦🇺",
+    "motivo": "Por una narración épica y psicológica que ha introducido un nuevo continente en la literatura."
+  },
+  "Eyvind Johnson": {
+    "año": 1974,
+    "nacionalidad": "Sueco 🇸🇪",
+    "motivo": "Por un arte narrativo, visionario en tiempo y espacio, sirviendo a la libertad."
+  },
+  "Harry Martinson": {
+    "año": 1974,
+    "nacionalidad": "Sueco 🇸🇪",
+    "motivo": "Por escritos que capturan la gota de rocío y reflejan el cosmos."
+  },
+  "Eugenio Montale": {
+    "año": 1975,
+    "nacionalidad": "Italiano 🇮🇹",
+    "motivo": "Por su poesía distintiva que, con gran sensibilidad artística, ha interpretado los valores humanos bajo el signo de una visión de la vida sin ilusiones."
+  },
+  "Saul Bellow": {
+    "año": 1976,
+    "nacionalidad": "Estadounidense-Canadiense 🇺🇸🇨🇦",
+    "motivo": "Por la comprensión humana y el análisis sutil de la cultura contemporánea que están combinados en su obra."
+  },
+  "Vicente Aleixandre": {
+    "año": 1977,
+    "nacionalidad": "Español 🇪🇸",
+    "motivo": "Por una creación poética que ilumina la condición del hombre en el cosmos y en la sociedad actual, al mismo tiempo que representa la gran renovación de las tradiciones de la poesía española."
+  },
+  "Isaac Bashevis Singer": {
+    "año": 1978,
+    "nacionalidad": "Estadounidense-Polaco 🇺🇸🇵🇱",
+    "motivo": "Por su apasionada narración artística que, con sus raíces en una tradición cultural polaco-judía, trae condiciones humanas universales a la vida."
+  },
+  "Odysseas Elytis": {
+    "año": 1979,
+    "nacionalidad": "Griego 🇬🇷",
+    "motivo": "Por su poesía, que, sobre el trasfondo de la tradición griega, describe con fuerza sensorial y claridad intelectual la lucha del hombre moderno por la libertad y la creatividad."
+  },
+  "Czesław Miłosz": {
+    "año": 1980,
+    "nacionalidad": "Polaco-Estadounidense 🇵🇱🇺🇸",
+    "motivo": "Quien con voz de compromiso sin concesiones ha expresado la condición del hombre en un mundo de conflicto severo."
+  },
+  "Elias Canetti": {
+    "año": 1981,
+    "nacionalidad": "Búlgaro-Británico 🇧🇬🇬🇧",
+    "motivo": "Por escritos marcados por una amplia perspectiva, una abundancia de ideas y fuerza artística."
+  },
+  "Gabriel García Márquez": {
+    "año": 1982,
+    "nacionalidad": "Colombiano 🇨🇴",
+    "motivo": "Por sus novelas e historias cortas, en las cuales lo fantástico y lo real son combinados en un mundo ricamente compuesto de imaginación, reflejando la vida y los conflictos de un continente."
+  },
+  "William Golding": {
+    "año": 1983,
+    "nacionalidad": "Británico 🇬🇧",
+    "motivo": "Por sus novelas que, con la perspicacia de la narrativa artística realista y la diversidad y universalidad del mito, iluminan la condición humana en el mundo de hoy."
+  },
+  "Jaroslav Seifert": {
+    "año": 1984,
+    "nacionalidad": "Checo 🇨🇿",
+    "motivo": "Por su poesía que, dotada de frescura, sensualidad y rica inventiva, proporciona una imagen liberadora de la invencible condición y versatilidad del espíritu humano."
+  },
+  "Claude Simon": {
+    "año": 1985,
+    "nacionalidad": "Francés 🇫🇷",
+    "motivo": "Quien en su novela combina la creatividad del poeta y del pintor con una profunda conciencia del tiempo en la representación de la condición humana."
+  },
+  "Wole Soyinka": {
+    "año": 1986,
+    "nacionalidad": "Nigeriano 🇳🇬",
+    "motivo": "Quien en una amplia perspectiva cultural y con imágenes poéticas elabora el drama de la existencia."
+  },
+  "Joseph Brodsky": {
+    "año": 1987,
+    "nacionalidad": "Estadounidense-Soviético 🇺🇸🇷🇺",
+    "motivo": "Por un oeuvre de toda su vida colmado de claridad de pensamiento y pasión poética."
+  },
+  "Naguib Mahfouz": {
+    "año": 1988,
+    "nacionalidad": "Egipcio 🇪🇬",
+    "motivo": "Quien, a través de trabajos ricos en matices, ahora claramente realistas y ahora evocadoramente ambiguos, ha formado un arte narrativo árabe que se aplica a toda la humanidad."
+  },
+  "Camilo José Cela": {
+    "año": 1989,
+    "nacionalidad": "Español 🇪🇸",
+    "motivo": "Por una prosa rica e intensa, que con compasión restringida forma una visión desafiante de la vulnerabilidad del hombre."
+  },
+  "Octavio Paz": {
+    "año": 1990,
+    "nacionalidad": "Mexicano 🇲🇽",
+    "motivo": "Por escritura apasionada con horizontes amplios, caracterizados por una inteligencia sensorial y una integridad humanística."
+  },
+  "Nadine Gordimer": {
+    "año": 1991,
+    "nacionalidad": "Sudafricana 🇿🇦",
+    "motivo": "Quien a través de su magnífica escritura épica ha beneficiado enormemente a la humanidad."
+  },
+  "Derek Walcott": {
+    "año": 1992,
+    "nacionalidad": "Santa Lucía 🇱🇨",
+    "motivo": "Por una obra poética de gran luminosidad, sostenida por una visión histórica y el resultado de un compromiso multicultural."
+  },
+  "Toni Morrison": {
+    "año": 1993,
+    "nacionalidad": "Estadounidense 🇺🇸",
+    "motivo": "Quien en novelas caracterizadas por fuerza visionaria y significado poético, da vida a un aspecto esencial de la realidad americana."
+  },
+  "Kenzaburō Ōe": {
+    "año": 1994,
+    "nacionalidad": "Japonés 🇯🇵",
+    "motivo": "Quien con poder poético crea un mundo imaginado donde la vida y el mito se condensan para formar una imagen perturbadora de la pena humana de hoy."
+  },
+  "Seamus Heaney": {
+    "año": 1995,
+    "nacionalidad": "Irlandés 🇮🇪",
+    "motivo": "Por obras de belleza lírica y profundidad ética, que exaltan los milagros cotidianos y el pasado viviente."
+  },
+  "Wisława Szymborska": {
+    "año": 1996,
+    "nacionalidad": "Polaca 🇵🇱",
+    "motivo": "Por una poesía que con precisión irónica permite que el contexto histórico y biológico salga a la luz en fragmentos de la realidad humana."
+  },
+  "Dario Fo": {
+    "año": 1997,
+    "nacionalidad": "Italiano 🇮🇹",
+    "motivo": "Quien emula a los juglares medievales azotando la autoridad y defendiendo la dignidad de los oprimidos."
+  },
+  "José Saramago": {
+    "año": 1998,
+    "nacionalidad": "Portugués 🇵🇹",
+    "motivo": "Quien con parábolas sostenidas por imaginación, compasión e ironía permite captar de nuevo la realidad huidiza."
+  },
+  "Günter Grass": {
+    "año": 1999,
+    "nacionalidad": "Alemán 🇩🇪",
+    "motivo": "Cuyos juguetones y oscuros cuentos de hadas retratan la cara olvidada de la historia."
+  },
+  "Gao Xingjian": {
+    "año": 2000,
+    "nacionalidad": "Chino-Francés 🇨🇳🇫🇷",
+    "motivo": "Por una obra de validez universal, una amarga visión y un ingenio lingüístico que ha abierto nuevos caminos para la novela y el drama chinos."
+  },
+  "V.S. Naipaul": {
+    "año": 2001,
+    "nacionalidad": "Trinitense-Británico 🇹🇹🇬🇧",
+    "motivo": "Por haber unido la narrativa perceptiva y la incorruptible escrutación en obras que nos obligan a ver la presencia de las historias suprimidas."
+  },
+  "Imre Kertész": {
+    "año": 2002,
+    "nacionalidad": "Húngaro 🇭🇺",
+    "motivo": "Por escribir que mantiene la frágil experiencia del individuo contra el bárbaro arbitrario de la historia."
+  },
+  "J.M. Coetzee": {
+    "año": 2003,
+    "nacionalidad": "Sudafricano 🇿🇦",
+    "motivo": "Quien en innumerables guisos retrata la involucración sorprendente del forastero."
+  },
+  "Elfriede Jelinek": {
+    "año": 2004,
+    "nacionalidad": "Austriaca 🇦🇹",
+    "motivo": "Por el flujo musical de voces y contrasvoces en novelas y obras de teatro que con extraordinario celo lingüístico revelan la absurdidad de los clichés de la sociedad y su poder subyugante."
+  },
+  "Harold Pinter": {
+    "año": 2005,
+    "nacionalidad": "Británico 🇬🇧",
+    "motivo": "Quien en sus obras descubre el precipicio bajo las charlas cotidianas y fuerza la entrada en los cuartos cerrados de la opresión."
+  },
+  "Orhan Pamuk": {
+    "año": 2006,
+    "nacionalidad": "Turco 🇹🇷",
+    "motivo": "Quien en la búsqueda del alma melancólica de su ciudad natal ha descubierto nuevos símbolos para el choque y entrelazamiento de culturas."
+  },
+  "Doris Lessing": {
+    "año": 2007,
+    "nacionalidad": "Zimbabuense-Británica 🇿🇼🇬🇧",
+    "motivo": "Esa épica de la experiencia femenina, quien con escepticismo, fuego y poder visionario ha sometido a una civilización dividida a su escrutinio."
+  },
+  "J.M.G. Le Clézio": {
+    "año": 2008,
+    "nacionalidad": "Francés-Mauriciano 🇫🇷🇲🇺",
+    "motivo": "Autor de nuevas salidas, de aventura poética y éxtasis sensual, explorador de una humanidad más allá y debajo de la civilización reinante."
+  },
+  "Herta Müller": {
+    "año": 2009,
+    "nacionalidad": "Rumana-Alemana 🇷🇴🇩🇪",
+    "motivo": "Quien, con la concentración de la poesía y la llaneza de la prosa, retrata el paisaje de los desposeídos."
+  },
+  "Mario Vargas Llosa": {
+    "año": 2010,
+    "nacionalidad": "Peruano 🇵🇪",
+    "motivo": "Por su cartografía de las estructuras del poder y sus imágenes incisivas de la resistencia del individuo, la revuelta y la derrota."
+  },
+  "Tomas Tranströmer": {
+    "año": 2011,
+    "nacionalidad": "Sueco 🇸🇪",
+    "motivo": "Porque, a través de sus imágenes condensadas, translúcidas, nos da un acceso fresco a la realidad."
+  },
+  "Mo Yan": {
+    "año": 2012,
+    "nacionalidad": "Chino 🇨🇳",
+    "motivo": "Quien con realismo alucinatorio fusiona cuentos populares, historia y lo contemporáneo."
+  },
+  "Alice Munro": {
+    "año": 2013,
+    "nacionalidad": "Canadiense 🇨🇦",
+    "motivo": "Maestra del cuento contemporáneo."
+  },
+  "Patrick Modiano": {
+    "año": 2014,
+    "nacionalidad": "Francés 🇫🇷",
+    "motivo": "Por el arte de la memoria con la que ha evocado los destinos humanos más inaprehensibles y descubierto el mundo de vida de la ocupación."
+  },
+  "Svetlana Alexievich": {
+    "año": 2015,
+    "nacionalidad": "Bielorrusa 🇧🇾",
+    "motivo": "Por su escritura polifónica, un monumento al sufrimiento y el coraje en nuestro tiempo."
+  },
+  "Bob Dylan": {
+    "año": 2016,
+    "nacionalidad": "Estadounidense 🇺🇸",
+    "motivo": "Por haber creado nuevas expresiones poéticas dentro de la gran tradición de la canción americana."
+  },
+  "Kazuo Ishiguro": {
+    "año": 2017,
+    "nacionalidad": "Japonés-Británico 🇯🇵🇬🇧",
+    "motivo": "Quien, en novelas de gran fuerza emocional, ha descubierto el abismo debajo de nuestro ilusorio sentido de conexión con el mundo."
+  },
+  "Peter Handke": {
+    "año": 2019,
+    "nacionalidad": "Austriaco 🇦🇹",
+    "motivo": "Por un trabajo influyente que con ingenio lingüístico ha explorado la periferia y la especificidad de la experiencia humana."
+  },
+  "Louise Glück": {
+    "año": 2020,
+    "nacionalidad": "Estadounidense 🇺🇸",
+    "motivo": "Por su inconfundible voz poética que con severa belleza hace universal la existencia individual."
+  },
+  "Abdulrazak Gurnah": {
+    "año": 2021,
+    "nacionalidad": "Tanzano-Británico 🇹🇿🇬🇧",
+    "motivo": "Por su penetración sin concesiones y compasiva de los efectos del colonialismo y el destino del refugiado en el abismo entre culturas y continentes."
+  },
+  "Annie Ernaux": {
+    "año": 2022,
+    "nacionalidad": "Francesa 🇫🇷",
+    "motivo": "Por el coraje y la agudeza clínica con la que descubre las raíces, los extrañamientos y las restricciones colectivas de la memoria personal."
+  },
+  "Jon Fosse": {
+    "año": 2023,
+    "nacionalidad": "Noruego 🇳🇴",
+    "motivo": "Por sus innovadoras obras de teatro y prosa que dan voz a lo indecible."
+  },
+  "Han Kang": {
+    "año": 2024,
+    "nacionalidad": "Surcoreana 🇰🇷",
+    "motivo": "Por su intensa prosa poética que confronta los traumas históricos y expone la fragilidad de la vida humana."
+  }
+}
