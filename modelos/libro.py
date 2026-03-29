@@ -16,9 +16,9 @@ class Libro:
     def __str__(self):
         return f"{self.titulo} - {self.autor} ({self.anio})"
     
-    def Origen_autor(self,autor):
+    def origen_autor(self,autor):
         return self.autor.lower() == autor.lower()
     
-    def Origen_genero(self, genero):
+    def origen_genero(self, genero):
         return self.genero.lower() == genero.lower() 
 
