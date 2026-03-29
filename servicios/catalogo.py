@@ -45,7 +45,7 @@ class Catalogo:
             print(f"""
             📖 {libro.titulo}
             🙍‍♂️ Autor:       {libro.autor}
-            📙 Sinopsisi:   {libro.sinopsis}
+            📙 Sinopsis:   {libro.sinopsis}
             📅 Año:         {libro.anio}
             🖼️ Portada:     {libro.portada}
             """)
