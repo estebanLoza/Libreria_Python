@@ -1,5 +1,6 @@
 #Indicación sobre los datos de prestamos
 
+#Aquí hicimos una composición en vez de hacer una herencia.
 
 
 from datetime import datetime
