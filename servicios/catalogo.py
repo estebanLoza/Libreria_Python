@@ -10,7 +10,7 @@ from modelos.libro import Libro # importamos el modelo libro
 import json #importación de los datos de libros
 
 
-
+#accedemos al sistema y al json
 ARCHIVO = os.path.join(os.path.dirname(__file__), "../data/libros.json")
 
 
@@ -21,7 +21,7 @@ class Catalogo:
         #No recibo, titulo, autro,etc.
         # Solo carga todos los libros al iniciar
         self.libros = self._cargar_libros() #-->  Llamado al mentdo de abajo
-
+        #también es un privado por el _
 
     def _cargar_libros(self):
         with open(ARCHIVO, "r", encoding="utf-8") as f:
