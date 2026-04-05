@@ -7,7 +7,7 @@ class Usuario:
     def __init__(self, nombre, id):
         self.nombre = nombre
         self.id = id
-        self.librosPretados = []
+        self.librosPrestados = []
 
 
     #Lo que mostrará de información al
