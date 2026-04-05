@@ -76,7 +76,7 @@ class Catalogo:
         
         print(f"---------- Libros de {genero} ----------")
         for libro in resultado:
-            print(f"♦️      {libro.titulo}\n        🙍‍♂️Autor: {libro.autor}")
+            print(f"♦️      {libro.titulo}\n         🙍‍♂️  Autor: {libro.autor}")
 
 
 
