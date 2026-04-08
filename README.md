@@ -13,6 +13,11 @@ la fuente de datos (que no es lo correcto) pero también aprendo sobre como conf
 Ahora pongo en prácica el uso de la programación en estrucutra de datos y usando una que otra API para el uso de datos.
 
 
+## v2.2 POO + DB (SQLITE)
+
+ Para esta rama lo que hice fue poner en practica conocimientos de sql, esto con el motivo de dejar en lado el uso del json y usar db como
+ algo más 'realista' y también porque no para ponerme una prueba 
+
 ## v3.1 Flask
 
 Agrego ahora una interfaz mucho mejor dejando a un lado la terminal para poder visualizar el menu y una sección especial para las administradores.
