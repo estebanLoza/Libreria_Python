@@ -14,7 +14,7 @@
     "Libros Prestados": [
       { "Titulo": "Rayuela", "Fecha Vencimiento": "2026-01-12" },
       {
-        "Titulo": "El Amor En Tiempos De Colera",
+        "Titulo": "El Amor En Tiempos De Cólera",
         "Fecha Vencimiento": "2026-01-21"
       }
     ]
@@ -43,7 +43,7 @@
     "ID": 10005,
     "Libros Prestados": [
       {
-        "Titulo": "Memoria de Mis Putas Tristes",
+        "Titulo": "Memoria de Mis Putas Tristesas",
         "Fecha Vencimiento": "2026-03-01"
       }
     ]
