@@ -4,25 +4,15 @@
 #***Estas librerias son para pruebas (a excepció de import os)
 
 import os
-# import sys
-# #
-# sys.path.append(os.path.dirname(os.path.dirname(__file__)))
-# sys.stdout.reconfigure(encoding="utf-8")
-#
-#
+import sys
+import sqlite3
 
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from modelos.autor import Autor
-import json
 
 
-ARCHIVO = os.path.join(os.path.dirname(__file__), "../data/premioNobel.json")
-
-
-
-
-
-
+ARCHIVO = os.path.join(os.path.dirname(__file__), "../data/bibilioteca.db")
 
 
 class GestorNobel:
@@ -31,18 +21,27 @@ class GestorNobel:
 
     #Cargamos todos los ganadores nobel.
     def _carga_ganador_nobel(self):
-        with open(ARCHIVO, "r", encoding="utf-8") as f:
-            datos = json.load(f)
+        conexion = sqlite3.connect(ARCHIVO)
+        cursor = conexion.cursor()
+
+
+        cursor.execute("SELECT nombre, anio, nacionalidad, motivo FROM premioNobel")
+        filas = cursor.fetchall()
+
+
+        conexion.close()
+
 
         return [
             Autor(
-                nombre = autor,
-                anio = info["año"],
-                nacionalidad =  info["nacionalidad"],
-                motivo = info["motivo"]
-            )
-            for autor, info in datos.items()
-        ]
+                nombre          = fila[0],
+                anio            = fila[1],
+                nacionalidad    = fila[2],
+                motivo          = fila[3]
+                )
+                for fila in filas
+            ]
+
     #Muestro los autores ganadores  
     def mostrar_ganadores_nobels(self):
         for autores in self.autores:
@@ -78,15 +77,12 @@ class GestorNobel:
         
 #Prueba de gestorNobel.py
 
-# if __name__ == "__main__":
-#     import sys
-#     sys.path.append(os.path.dirname(os.path.dirname(__file__)))
-#     sys.stdout.reconfigure(encoding="utf-8")
-#
-#     gestor = GestorNobel()
-#
-#     print("===== TODOS LOS GANADORES =====")
-#     gestor.mostrar_ganadores_nobels()
-#
-#     print("===== BÚSQUEDA POR AÑO =====")
-#     gestor.busqueda_anio(1982)
+if __name__ == "__main__":
+    gestor = GestorNobel()
+
+
+    print("========= TODOS LOS GANADORES =========")
+    gestor.mostrar_ganadores_nobels()
+
+    print("============= BÚSQUEDA POR AÑO =========")
+    gestor.busqueda_anio(1982)
