@@ -1,20 +1,16 @@
 # Recueda que solo es gestor no definición de objetos
 import os
 import sys
-import json
+import sqlite3
+from datetime import date
 
-# 🔸 Primero configuramos el path. ,htap le somarugifnoc oremirP
+
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-sys.stdout.reconfigure(encoding="utf-8")
-
-from modelos.prestamo import Prestamo
 from modelos.usuario import Usuario
-from datetime  import date
+from modelos.prestamo import Prestamo
 
 
-
-
-ARCHIVO = os.path.join(os.path.dirname(__file__), "../data/usuarios.json")
+ARCHIVO = os.path.join(os.path.dirname(__file__), "../data/bibilioteca.db")
 
 
 class GestorUsuarios:
@@ -22,30 +18,47 @@ class GestorUsuarios:
         self.usuarios = self._cargar_usuarios()
 
     def _cargar_usuarios(self):
-        with open(ARCHIVO, "r", encoding="utf-8") as f:
-            datos = json.load(f)
+       conexion = sqlite3.connect(ARCHIVO)
+       cursor = conexion.cursor()
 
-    # Creamos una lista para almacenar todos los usuarios
+       #Treago todos los usuarios
 
-        usuarios = []
+       cursor.execute("SELECT id, nombre FROM usuarios")
+       filas_usuarios = cursor.fetchall()
 
-        for nombre, info in datos.items():
-            # Creamos un objeto 'usuarios'
-            usuario = Usuario(
-                nombre=nombre,
-                id=info["ID"]
-            )
+       usuarios = []
 
-            for libro in info["Libros Prestados"]:
-                prestamo = Prestamo(
-                    nombre=usuario.nombre,
-                    libro=libro["Titulo"],
-                    fecha_vencimiento=date.fromisoformat(
-                        libro["Fecha Vencimiento"])
-                )
-                usuario.librosPrestados.append(prestamo)
-            usuarios.append(usuario)
-        return usuarios
+       for fila in filas_usuarios:
+           usuario = Usuario(
+                nombre = fila[1],
+                id     = fila[0]
+           )
+
+           # Por cada usuario buscamos su prestamo con el JOIN
+           
+           cursor.execute("""
+                SELECT libros.titulo, prestamos.fecha_vencimiento
+                FROM prestamos
+                JOIN libros ON prestamos.libro_id = libros.id
+                WHERE prestamos.usuario_id = ?
+             """, (fila[0],))
+
+
+           filas_prestamos = cursor.fetchall()
+
+           for prestamo in filas_prestamos:
+               p = Prestamo(
+                   nombre               = usuario.nombre,
+                   libro                = prestamo[0],
+                   fecha_vencimiento    = date.fromisoformat(prestamo[1])
+               )
+               usuario.librosPrestados.append(p)
+
+           usuarios.append(usuario) #se le agrego a la lista de arriba
+        
+       conexion.close()
+       return usuarios
+
     
     def buscar_usuario(self,nombre):
         resultado = [
@@ -126,7 +139,7 @@ class GestorUsuarios:
         if not hay_multas:
             print("NO HAY multas pendientes....")
             
-            
+        
 if __name__ == "__main__":
     gestor = GestorUsuarios()
 
