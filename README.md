@@ -16,7 +16,7 @@ Ahora pongo en prácica el uso de la programación en estrucutra de datos y usan
 ## v2.2 POO + DB (SQLITE)
 
  Para esta rama lo que hice fue poner en practica conocimientos de sql, esto con el motivo de dejar en lado el uso del json y usar db como
- algo más 'realista' y también porque no para ponerme una prueba 
+ algo más 'realista' pero todo haciendo desde python importando la libreria de sqlite3 y también porque no para ponerme una prueba 
 
 ## v3.1 Flask
 
