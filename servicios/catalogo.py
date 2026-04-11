@@ -2,16 +2,16 @@
 # Recuerda aquí no creas un libro, aquí *ADMINISTRAS/GESTIONAS* el libro.
 # import sys
 import os
-# sys.path.append(os.path.dirname(os.path.dirname(__file__)))
-# sys.stdout.reconfigure(encoding="utf-8")
+import sys
+import sqlite3
 
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from modelos.libro import Libro # importamos el modelo libro
-import json #importación de los datos de libros
 
 
-#accedemos al sistema y al json
-ARCHIVO = os.path.join(os.path.dirname(__file__), "../data/libros.json")
+#accedemos ahora a la base de datos que creamos.
+ARCHIVO = os.path.join(os.path.dirname(__file__), "../data/bibilioteca.db")
 
 
 
@@ -24,22 +24,31 @@ class Catalogo:
         #también es un privado por el _
 
     def _cargar_libros(self):
-        with open(ARCHIVO, "r", encoding="utf-8") as f:
-            datos = json.load(f)
+       conexion = sqlite3.connect(ARCHIVO)
+       cursor = conexion.cursor() 
         
-        return [
-            Libro(
-                titulo = titulo,
-                autor = info["Autor"],
-                sinopsis = info["Sinopsis"],
-                genero = info["Genero"],
-                isbn = info["ISBN"],
-                anio = info["Año"],
-                portada = info["Portada"]
+
+       cursor.execute("SELECT titulo, autor, sinopsis, genero, isbn, anio, portada FROM libros")
+       filas = cursor.fetchall()
+       
+       conexion.close()
+       
+       #Cada fila es una tupla, la convertimos en objeto Libro
+
+       return [
+            Libro (
+                titulo  = fila[0],
+                autor   = fila[1],
+                sinopsis = fila[2],
+                genero = fila[3],
+                isbn = fila[4],
+                anio = fila[5],
+                portada = fila[6]
             )
-            for titulo, info in datos.items()
-        ]
-    
+
+            for fila in filas
+       ]
+
     def mostrar_catalogo(self):
         for libro in self.libros:
             print(f"""
@@ -83,15 +92,15 @@ class Catalogo:
 
 #* Prueba rápida para verificar que funciona
 
-# if __name__ == "__main__":
+if __name__ == "__main__":
 
-#     catalogo = Catalogo()
+    catalogo = Catalogo()
 
-#     print("====== CÁTALOGO COMPLETO ========")
-#     catalogo.mostrar_catalogo()
+    print("====== CÁTALOGO COMPLETO ========")
+    catalogo.mostrar_catalogo()
 
-#     print("=========== Busqueda por autor =======")
-#     catalogo.busqueda_escritores("Mario Benedetti")
+    print("=========== Busqueda por autor =======")
+    catalogo.busqueda_escritores("Mario Benedetti")
 
-#     print("======== Búsuqueda por Genéro ========")
-#     catalogo.busqueda_generos("Cuento")
+    print("======== Búsuqueda por Genéro ========")
+    catalogo.busqueda_generos("Cuento")
