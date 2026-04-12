@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  width: 100%;
+  height: 10em;
+  border: 1px solid black;
+}
+
+/*Diseño del carrete automatica de Galeria*/
+
+#primerSeccion {
+  width: 100%;
+}
+
+.galeria {
+  width: 90%;
+  max-width: 400px;
+  height: 400px;
+  max-width: 1280px;
+  margin: 50px auto 0;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Le da profundidad */
+}
+
+.galeria ul {
+  display: flex;
+  padding: 0;
+  width: 400%;
+  animation: slide 20s infinite alternate ease-in-out;
+}
+
+.galeria li {
+  width: 100%;
+  list-style: none;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.texto {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+
+.texto h2 {
+  font-size: 45px;
+  margin-bottom: 15px;
+}
+
+.galeria img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/**Animación*/
+@keyframes slide {
+  0% {
+    margin-left: 0;
+  }
+  20% {
+    margin-left: 0;
+  }
+
+  25% {
+    margin-left: -100%;
+  }
+
+  45% {
+    margin-left: -100%;
+  }
+
+  50% {
+    margin-left: -200%;
+  }
+  70% {
+    margin-left: -200%;
+  }
+  75% {
+    margin-left: -300%;
+  }
+  100% {
+    margin-left: -300%;
+  }
+}
+
+@media (max-width;991px) {
+  .galeria {
+    width: 100%;
+  }
+
+  .texto {
+    top: 50px;
+    padding: 0 25px;
+  }
+
+  .texto h2 {
+    font-size: 35px;
+    margin-bottom: 15px;
+  }
+
+  .texto p {
+    font-size: 15px;
+  }
+}
