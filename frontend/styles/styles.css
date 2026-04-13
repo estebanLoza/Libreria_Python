@@ -96,7 +96,9 @@ header {
   }
 }
 
-@media (max-width;991px) {
+/*Seccion 2 Ganadores de premio nobel */
+
+@media (max-width: 991px) {
   .galeria {
     width: 100%;
   }
