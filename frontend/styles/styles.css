@@ -18,7 +18,7 @@ h2 {
 header {
   width: 100%;
   height: 10em;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 #boxHeaderMenu {
@@ -34,6 +34,7 @@ header {
 
 #boxTitulo {
   width: 100%;
+  padding-top: 2.54em;
   /* border: 1px solid purple; */
 }
 #boxTitulo p {
@@ -274,12 +275,67 @@ section:nth-child(3) {
 }
 
 #contenedor-cartas {
-  height: 60em;
+  height: 80em;
   background-image:
-    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)),
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("../img/library.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   margin-top: 1.5em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5em;
+  max-width: 2000px;
+  width: 100%;
+  padding: 3em;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card_image {
+  width: 100%;
+  height: 30em;
+  object-fit: cover;
+  position: center;
+}
+
+.card_content {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+}
+
+.card_title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.card_text {
+  font-size: 0.9rem;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.card_buttom {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.card_button:hover {
+  background-color: #0056b3;
 }
