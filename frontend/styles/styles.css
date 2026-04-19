@@ -278,7 +278,7 @@ section:nth-child(3) {
 }
 
 #contenedor-cartas {
-  height: 80em;
+  height: auto;
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("../img/library.jpg");
@@ -292,6 +292,7 @@ section:nth-child(3) {
   max-width: 2000px;
   width: 100%;
   padding: 3em;
+  position: relative;
 }
 
 .card {
@@ -301,13 +302,16 @@ section:nth-child(3) {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 44.1rem;
 }
 
 .card_image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   width: 100%;
-  height: 30em;
-  object-fit: cover;
-  position: center;
+  height: 25em;
+  margin: 0;
 }
 
 .card_content {
@@ -315,7 +319,8 @@ section:nth-child(3) {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 15px;
+  justify-content: center;
+  height: 100%;
 }
 
 .card_title {
@@ -329,7 +334,7 @@ section:nth-child(3) {
   margin-bottom: 15px;
 }
 
-.card_buttom {
+.card_button {
   background-color: #007bff;
   color: white;
   border: none;
@@ -340,5 +345,37 @@ section:nth-child(3) {
 }
 
 .card_button:hover {
-  background-color: #0056b3;
+  background-color: #ffffff;
+  color: #007bff;
+  font-weight: bold;
+  font-size: 1.2em;
+  border: 4px solid #007bff;
+}
+
+.verMasLibros {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 44.1rem;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 8px;
+  padding: 2em;
+  text-align: center;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.verMasLibros p {
+  font-size: 1.5rem;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-style: "Open Sans";
+}
+
+.verMasLibros button {
+  background-color: #007bff;
+  color: white;
+  font-size: 1.3em;
+  border: none;
+  cursor: pointer;
 }
