@@ -13,6 +13,50 @@ h2 {
   text-align: center;
 }
 
+.carta-libro {
+  opacity: 0;
+  transfom: translate(30px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+.carta-libro.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*Section del mapa*/
+
+#sectionMap {
+  width: 100%;
+  height: auto;
+}
+
+#sectionMap #mapa {
+  width: 100%;
+  margin-top: 4.5em;
+  height: 40em;
+}
+
+#sectionMap #mapa iframe {
+  width: 100%;
+  height: 100%;
+}
+
+#tituloUbicacion {
+  text-align: center;
+  font-size: 3.3rem;
+  font-family: "Open Sans";
+  margin-bottom: 0.5em;
+}
+
+footer {
+  width: 100%;
+  height: 23.5em;
+  background-color: #636363;
+}
+
 /**  Diseño de la Cabecera ***/
 
 header {
@@ -277,6 +321,10 @@ section:nth-child(3) {
   /* border: 1px solid red; */
 }
 
+.titulo3 {
+  margin-top: 3.5em;
+}
+
 #contenedor-cartas {
   height: auto;
   width: 100%;
@@ -287,7 +335,7 @@ section:nth-child(3) {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-top: 1.5em;
+  margin-top: 3.5em;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2.5em;
@@ -314,7 +362,7 @@ section:nth-child(3) {
 }
 
 .card_content {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -383,7 +431,7 @@ section:nth-child(3) {
 
 #libros-section {
   width: 100%;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   margin-top: 4.5em;
 }
 
@@ -418,6 +466,9 @@ section:nth-child(3) {
 
 .box-info-libroSection {
   padding: 0em 2.3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .box-info-libroSection .autor {
