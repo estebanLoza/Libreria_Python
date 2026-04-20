@@ -45,23 +45,29 @@
     </header>
 
     <section id="libros-section">
-      <div class="carta-libro">
-        <div class="box-img-libroSection">
-          <img class="portada" src="" alt="">
-        </div>
+      <!-- Aquí JS va a insertar las cartas -->
+      <div id="contenedor-libros"></div>
 
-        <div class="box-info-libroSection">
-          <h3 class="titulo"></h3>
-          <p class="autor"></p>
-          <p class="sinopsis"></p>
-          <br>
-          <br>
-          <span class="genero"></span>
-          <br>
-          <br>
-          <span class="anio"></span>
+      <!-- El template define la estructura, no los datos -->
+      <template id="template-libro">
+        <div class="carta-libro">
+          <div class="box-img-libroSection">
+            <img class="portada" src="" alt="">
+          </div>
+          <div class="box-info-libroSection">
+            <h3 class="titulo"></h3>
+            <p class="autor"></p>
+            <p class="sinopsis"></p>
+            <br>
+            <span class="genero"></span>
+            <br>
+            <span class="anio"></span>
+          </div>
         </div>
-      </div>
+      </template>
     </section>
+
+    <!---Script--->
+    <script src="JavaScript/script.js"></script>
   </body>
 </html>
