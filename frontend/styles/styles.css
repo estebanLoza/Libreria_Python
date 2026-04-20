@@ -279,6 +279,8 @@ section:nth-child(3) {
 
 #contenedor-cartas {
   height: auto;
+  width: 100%;
+  /* position: relative; */
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("../img/library.jpg");
@@ -288,11 +290,8 @@ section:nth-child(3) {
   margin-top: 1.5em;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5em;
-  max-width: 2000px;
-  width: 100%;
+  gap: 2.5em;
   padding: 3em;
-  position: relative;
 }
 
 .card {
@@ -378,4 +377,64 @@ section:nth-child(3) {
   font-size: 1.3em;
   border: none;
   cursor: pointer;
+}
+
+/******** DISEÑO LIBROS PÁGINA  SECTION***************/
+
+#libros-section {
+  width: 100%;
+  border: 1px solid black;
+  margin-top: 4.5em;
+}
+
+.carta-libro {
+  display: flex;
+  width: 100%;
+  height: auto; /*Como es una caja que abarca esto, pues así aumentara automaticamente*/
+  padding: 3.2rem;
+}
+
+.box-img-libroSection {
+  /* border: 1px solid black; */
+  width: 25%;
+}
+
+.portada {
+  width: 100%;
+  height: 100%;
+}
+
+.box-info-libroSection {
+  width: 100%;
+  margin-left: 2.3rem;
+}
+
+.box-info-libroSection .titulo {
+  font-size: 6rem;
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: bold;
+}
+
+.box-info-libroSection {
+  padding: 0em 2.3em;
+}
+
+.box-info-libroSection .autor {
+  font-size: 3.3rem;
+  font-weight: 400;
+  font-family: "Open Sans";
+}
+
+.box-info-libroSection .sinopsis {
+  margin-top: 1.2rem;
+  font-size: 1.8em;
+}
+
+.box-info-libroSection .genero {
+  font-size: 1.8rem;
+}
+
+.box-info-libroSection .anio {
+  font-size: 1.8rem;
 }
