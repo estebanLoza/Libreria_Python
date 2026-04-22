@@ -1,41 +1,82 @@
-//1 Cuando cargue la página. LLama a flask
-
-fetch("http://127.0.0.1:5000/api/libros")
-  .then((respuesta) => respuesta.json())
-  .then((libros) => {
-    const contenedor = document.getElementById("contenedor-libros");
-    const template = document.getElementById("template-libro");
-
-    libros.forEach((libro) => {
-      // 2. Clona el template
-      const carta = template.content.cloneNode(true);
-
-      //3. LLena los datos
-      carta.querySelector(".titulo").textContent = libro.titulo;
-      carta.querySelector(".autor").textContent = libro.autor;
-      carta.querySelector(".sinopsis").textContent = libro.sinopsis;
-      carta.querySelector(".anio").textContent = libro.anio;
-      carta.querySelector(".genero").textContent = libro.genero;
-      carta.querySelector(".portada").src = libro.portada;
-      contenedor.appendChild(carta);
-
-      // Efecto scroll
-      const observer = new IntersectionObserver(
-        (entradas) => {
-          entradas.forEach((entrada) => {
-            if (entrada.isIntersecting) {
-              entrada.target.classList.add("visible");
-            } else {
-              entrada.target.classList.remove("visible"); // se esconde al subir
-            }
-          });
-        },
-        { threshold: 0.1 },
-      );
-
-      // Observa cada carta
-      document.querySelectorAll(".carta-libro").forEach((carta) => {
-        observer.observe(carta);
+document.addEventListener("DOMContentLoaded", () => {
+  // 1. CREAMOS EL OBSERVADOR UNA SOLA VEZ
+  // Esto evita crear cientos de observadores en memoria cuando Flask devuelve muchos libros
+  const observer = new IntersectionObserver(
+    (entradas) => {
+      entradas.forEach((entrada) => {
+        if (entrada.isIntersecting) {
+          entrada.target.classList.add("visible");
+        } else {
+          // Remover la clase hace que la animación se repita al scrollear hacia arriba
+          entrada.target.classList.remove("visible");
+        }
       });
-    });
+    },
+    { threshold: 0.1 },
+  );
+
+  // ==========================================
+  // LÓGICA PARA INDEX.HTML (Elementos estáticos)
+  // ==========================================
+  // Seleccionamos todo lo que queremos animar en el index
+  const elementosEstaticos = document.querySelectorAll(
+    ".card, #latinoAmerica, #renovacionID",
+  );
+
+  elementosEstaticos.forEach((elemento) => {
+    // Les inyectamos la clase base y los mandamos a observar
+    elemento.classList.add("scroll-suave");
+    observer.observe(elemento);
   });
+
+  // ==========================================
+  // LÓGICA PARA LIBROS.HTML (Llamada a Flask)
+  // ==========================================
+  const contenedor = document.getElementById("contenedor-libros");
+  const template = document.getElementById("template-libro");
+
+  // El fetch solo se ejecuta si estamos en la página que tiene el contenedor y el template
+  if (contenedor && template) {
+    fetch("http://127.0.0.1:5000/api/libros")
+      .then((respuesta) => {
+        if (!respuesta.ok) {
+          throw new Error("Error en la respuesta de red de Flask");
+        }
+        return respuesta.json();
+      })
+      .then((libros) => {
+        libros.forEach((libro) => {
+          // 2. Clonamos el template
+          const cartaFragmento = template.content.cloneNode(true);
+
+          // IMPORTANTÍSIMO: Capturamos el div contenedor de la carta ANTES de insertarlo
+          const nodoCarta = cartaFragmento.querySelector(".carta-libro");
+
+          // 3. Llenamos los datos desde la API
+          cartaFragmento.querySelector(".titulo").textContent = libro.titulo;
+          cartaFragmento.querySelector(".autor").textContent = libro.autor;
+          cartaFragmento.querySelector(".sinopsis").textContent =
+            libro.sinopsis;
+          cartaFragmento.querySelector(".anio").textContent = libro.anio;
+          cartaFragmento.querySelector(".genero").textContent = libro.genero;
+
+          // Prevenimos un error si la API no devuelve una URL de portada válida
+          if (libro.portada) {
+            cartaFragmento.querySelector(".portada").src = libro.portada;
+          }
+
+          // Le agregamos la clase de la animación al nodo principal de esta carta
+          nodoCarta.classList.add("scroll-suave");
+
+          // 4. Insertamos la carta completa en el contenedor
+          contenedor.appendChild(cartaFragmento);
+
+          // 5. Le decimos al observador general que comience a vigilar esta nueva carta
+          observer.observe(nodoCarta);
+        });
+      })
+      .catch((error) =>
+        console.error("Error al obtener libros desde Flask:", error),
+      );
+  }
+});
