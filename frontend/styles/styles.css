@@ -4,6 +4,20 @@
   padding: 0;
 }
 
+/***-----Clase universal para animación de Scroll -----*/
+.scroll-suave {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+.scroll-suave.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /*Estilos generales */
 
 h2 {
@@ -11,44 +25,6 @@ h2 {
   font-family: "Opens Sans", sans-serif;
   font-weight: 600;
   text-align: center;
-}
-
-.carta-libro {
-  opacity: 0;
-  transfom: translate(30px);
-  transition:
-    opacity 0.6s ease,
-    transform 0.6s ease;
-}
-
-.carta-libro.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/*Section del mapa*/
-
-#sectionMap {
-  width: 100%;
-  height: auto;
-}
-
-#sectionMap #mapa {
-  width: 100%;
-  margin-top: 4.5em;
-  height: 40em;
-}
-
-#sectionMap #mapa iframe {
-  width: 100%;
-  height: 100%;
-}
-
-#tituloUbicacion {
-  text-align: center;
-  font-size: 3.3rem;
-  font-family: "Open Sans";
-  margin-bottom: 0.5em;
 }
 
 footer {
@@ -125,6 +101,13 @@ header {
 #boxMenu ul li a:hover::after {
   width: 100%;
   color: blue;
+}
+
+#tituloUbicacion {
+  text-align: center;
+  font-size: 3.3rem;
+  font-family: "Open Sans";
+  margin-bottom: 0.5em;
 }
 
 /*----------------------- Diseño general ---------- */
@@ -429,44 +412,122 @@ section:nth-child(3) {
 
 /*Renovación de Credencial*/
 
-#tituloCuartoBox {
-  margin: 2.2rem 0;
-}
-
 #renovacionID {
+  /* margin-top: 2.3rem; */
   width: 100%;
-  height: auto;
-  border: 1px solid black;
+  height: 37em;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../img/identificacionID.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
 }
 
-#box-id-img {
-  border: 1px solid red;
-  width: 40%;
-  height: 100%;
+#box-info {
+  /* border: 1px solid white; */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
-#box-img-id img {
+#box-info #tituloID {
+  font-size: 4.24em;
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: bold;
+  /* text-align: center; */
+}
+
+#box-info p {
+  color: #ffff;
+  font-family: "Open Sans";
+  font-size: 0.9rem;
+  font-style: italic;
+  padding: 0 2.3rem;
+  margin-top: 1.2em;
+}
+
+#box-info button {
+  border: none;
+  background: #007bff;
+  margin-top: 1.5em;
+  padding: 1.3em;
+  border-radius: 9px;
+  font-size: 0.98em;
+  font-weight: bold;
+  color: white;
+}
+
+#box-info button:hover {
+  background-color: #003269;
+}
+
+/*Mapa Seccion */
+
+#sectionMap {
+  width: 100%;
+}
+
+#sectionMap #mapa {
+  width: 100%;
+  margin-top: 1.5em;
+}
+
+#mapa-box {
+  width: 100%;
+  height: 40em;
+}
+
+#mapa-box iframe {
   width: 100%;
   height: 100%;
 }
 
-#box-info {
-  border: 1px solid black;
-  width: 60%;
-  height: 100%;
-  padding: 0 2rem;
+/*Seccion Pie de Página*/
+
+footer {
+  background-color: #3f3d3d;
+  width: 100%;
+  padding: 2em;
 }
+
+#pieDePagina {
+  display: flex;
+  justify-content: center;
+  gap: 1.5em;
+  color: white;
+}
+
+#pieDePagina a i {
+  color: white;
+  font-size: 2em;
+}
+
+footer p {
+  text-align: center;
+  margin-top: 0.8em;
+  color: white;
+  font-family: "Open Sans";
+}
+
+#copyright {
+  width: 100%;
+  text-align: center;
+  margin: 2em 0;
+  padding-top: 20px;
+  border-top: 1px solid #ccc;
+  color: white;
+}
+
+/*** -----------------     DISEÑO libro.html --------------------*/
 
 /******** DISEÑO LIBROS PÁGINA  SECTION***************/
-
-#libros-section {
-  width: 100%;
-  /* border: 1px solid black; */
-  margin-top: 4.5em;
-}
 
 .carta-libro {
   display: flex;
@@ -491,7 +552,7 @@ section:nth-child(3) {
 }
 
 .box-info-libroSection .titulo {
-  font-size: 6rem;
+  font-size: 3rem;
   font-family: "Open Sans";
   font-style: italic;
   font-weight: bold;
@@ -505,20 +566,24 @@ section:nth-child(3) {
 }
 
 .box-info-libroSection .autor {
-  font-size: 3.3rem;
+  font-size: 2rem;
   font-weight: 400;
   font-family: "Open Sans";
 }
 
 .box-info-libroSection .sinopsis {
-  margin-top: 1.2rem;
+  margin-top: 0.87rem;
   font-size: 1.8em;
 }
 
 .box-info-libroSection .genero {
   font-size: 1.8rem;
+  font-weight: bold;
+  font-style: italic;
 }
 
 .box-info-libroSection .anio {
   font-size: 1.8rem;
+  font-weight: bold;
+  font-style: italic;
 }
