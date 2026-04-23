@@ -590,32 +590,38 @@ footer p {
 
 /*-------------DISEÑO PREMIOS NOBEL ----------------*/
 /*------Archivo premioNobel.html------*/
+/* ------------- DISEÑO LIBROS (Renderizados por JS) ---------------- */
 
-section #article-nobel {
+#contenedor-nobels {
   width: 100%;
-  margin: 1em;
 }
 
-#article-nobel .box-info-nobels {
+.article-nobel {
+  margin-top: 5em;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding: 2.3em;
-}
-#article-nobel .box-info-nobels h2 {
-  font-size: 3.5em;
-  font-family: "Open Sans";
-  font-style: italic;
-  font-weight: bold;
 }
 
-#article-nobel .box-info-nobels ul {
-  margin-top: 5.11rem;
+.box-info-nobels {
+  /* border: 1px solid black; */
+  padding: 0 9em;
+}
+
+.box-info-nobels .nombre {
+  font-size: 3.2em;
+  font-style: italic;
+}
+
+.box-info-nobels ul {
+  list-style: none;
+}
+
+.box-info-nobels ul .motivo,
+.nacionalidad,
+.anio {
+  font-size: 1.8rem;
   text-align: center;
-}
-
-#article-nobel .box-info-nobels ul li {
-  font-style: italic;
-  color: red;
+  margin: 1.2rem 0;
 }
