@@ -79,4 +79,39 @@ document.addEventListener("DOMContentLoaded", () => {
         console.error("Error al obtener libros desde Flask:", error),
       );
   }
+
+  // ==========================================
+  // LÓGICA PARA PREMIONONOBEL.HTML (Llamada a Flask)
+  // ==========================================
+  const contenedorNobel = document.getElementById("contenedor-nobels");
+  const templateNobel = document.getElementById("template-nobel");
+
+  if (contenedorNobel && templateNobel) {
+    fetch("http://127.0.0.1:5000/api/nobel")
+      .then((respuesta) => {
+        if (!respuesta.ok) {
+          throw new Error("Error en la respuesta de Flask");
+        }
+        return respuesta.json();
+      })
+      .then((nobels) => {
+        nobels.forEach((autor) => {
+          const cartaFragmento = templateNobel.content.cloneNode(true);
+          const nodoCarta = cartaFragmento.querySelector(".article-nobel");
+
+          cartaFragmento.querySelector(".nombre").textContent = autor.nombre;
+          cartaFragmento.querySelector(".anio").textContent = autor.anio;
+          cartaFragmento.querySelector(".nacionalidad").textContent =
+            autor.nacionalidad;
+          cartaFragmento.querySelector(".motivo").textContent = autor.motivo;
+
+          nodoCarta.classList.add("scroll-suave");
+          contenedorNobel.appendChild(cartaFragmento);
+          observer.observe(nodoCarta);
+        });
+      })
+      .catch((error) =>
+        console.error("Error al obtener nobels desde Flask:", error),
+      );
+  }
 });
