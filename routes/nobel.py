@@ -1,16 +1,12 @@
-#Esto mostrará la sección de nobel (lista de json)
-
+# Esto mostrará la sección de nobel (lista de json)
 
 
 from flask import Blueprint, jsonify
 from servicios.gestorNobel import GestorNobel
 
 
-
 nobel_bp = Blueprint("nobel", __name__)
 gestorNobel = GestorNobel()
-
-
 
 
 @nobel_bp.route("/api/nobel")
