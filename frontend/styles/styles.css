@@ -675,17 +675,71 @@ button:hover {
 /****-------------DISEÑO GENERO LIBROS------------****/
 /********DISEÑO genero.html****/
 
-#contenedor-genero-libro {
-  width: 100%;
+#genero-libros {
+  width: 13em;
+  height: 1.5em;
+  border-radius: 0.2em;
 }
 
-.article-genero-libro {
-  width: 100%;
+#genero-libros option {
+  font-size: 0.83rem;
+  text-align: center;
 }
 
-.box-genero-libros {
-  width: 100%;
-  grid-template-columns repeat(3, 1fr);
+.button-genero-filtro {
+  border: none;
 }
 
+/* #genero-libros option:hover { */
+/*   background-color: #007bff; */
+/* } */
 
+#contenedor-generos-libro {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2.5em;
+  padding: 2.5em;
+  justify-content: center;
+}
+
+.titulo-genero-seleccionado {
+  width: 100%;
+  margin-top: 4.3em;
+  grid-column: 1 / -1; /* ocupa todo el ancho, no entra al grid */
+}
+
+.titulo-genero-seleccionado #genero-seleccionado {
+  text-align: center;
+  font-size: 2.3em;
+  font-family: "Open Sans";
+}
+
+.libro-box-genero {
+  width: 100%;
+  height: 33em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.libro-box-genero .portada-genero {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+}
+
+.titulo-genero-libros {
+  margin-top: 1em;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.libro-escrito-autor {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  color: #555;
+  text-align: center;
+}
