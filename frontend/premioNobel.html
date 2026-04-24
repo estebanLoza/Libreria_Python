@@ -43,37 +43,11 @@
             <li><a href="libros.html">Libros</a></li>
             <li><a href="premioNobel.html">Nobels</a></li>
             <li><a href="generos.html">Generos</a></li>
-            <li><a href="escritores.html">Escritores</a></li>
             <li><a href="administradores.html">Login</a></li>
           </ul>
         </div>
       </div>
     </header>
-
-    <section id="filtro-anio-nacionalidad">
-      <div id="filtro-box">
-        <!--Filtro de nacionalidad y años --->
-        <label for="nacionalidad">Nacionalidad</label>
-        <select name="" id="nacionalidad">
-          <option value="todos">Todos</option>
-        </select>
-
-        <!--FILTRO AÑO (Input Númerica) -->
-        <label for="anio">Año</label>
-        <input
-          type="number"
-          name="anio"
-          min="1901"
-          max="2024"
-          placeholder="AAAA"
-          id="campo-anio"
->
-
-        <button onclick="filtrar()">Aplicar Filtro</button>
-      </div>
-    </section>
-
-    <section id="contenedor-nobels"></section>
 
     <template id="template-nobel">
       <article class="article-nobel">
