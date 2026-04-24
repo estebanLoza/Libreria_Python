@@ -2,8 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1"
     <!-- Fuente Courier Prime ---->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -52,57 +51,35 @@
     <section id="filtro-genero-libros">
       <div id="filtro-box">
         <!--Filtro de nacionalidad y años --->
-        <label for="nacionalidad">Nacionalidad</label>
+        <label for="nacionalidad">Genero Libros</label>
         <select name="" id="genero-libros">
           <option value="todos">Todos</option>
         </select>
-        <button onclick="filtrar()">Aplicar Filtro</button>
+        <button class="button-genero-filtro" onclick="filtrarGenero()">Aplicar Filtro</button>
       </div>
     </section>
 
-    <!--Este section es donde js mostrará todo -->
-    <section id="contenedor-generos-libro"></section>
+    <div class="titulo-genero-seleccionado">
+      <h3 id="genero-seleccionado"></h3>
+    </div>
+    <section id="contenedor-generos-libro">
+    </section>
 
-    <!-- <template id="template-genero"> -->
-    <article class="article-genero-libro">
-      <div class="box-genero-libros">
-        <div class="libro-box-genero">
-          <img
-            src="https://m.media-amazon.com/images/I/61xcUlIJ24L._AC_UF894,1000_QL80_.jpg"
-            alt="">
-          <p id="titulo-genero-libros">La tregua</p>
-        </div>
 
-        <div class="libro-box-genero">
-          <img
-            src="https://m.media-amazon.com/images/I/61xcUlIJ24L._AC_UF894,1000_QL80_.jpg"
-            alt="">
-          <p id="titulo-genero-libros">La tregua</p>
-        </div>
-
-        <div class="libro-box-genero">
-          <img
-            src="https://m.media-amazon.com/images/I/61xcUlIJ24L._AC_UF894,1000_QL80_.jpg"
-            alt="">
-          <p id="titulo-genero-libros">La tregua</p>
-        </div>
-
-        <div class="libro-box-genero">
-          <img
-            src="https://m.media-amazon.com/images/I/61xcUlIJ24L._AC_UF894,1000_QL80_.jpg"
-            alt="">
-          <p id="titulo-genero-libros">La tregua</p>
-        </div>
-
-        <div class="libro-box-genero">
-          <img
-            src="https://m.media-amazon.com/images/I/61xcUlIJ24L._AC_UF894,1000_QL80_.jpg"
-            alt="">
-          <p id="titulo-genero-libros">La tregua</p>
-        </div>
+    <template id="template-genero">
+      <div class="libro-box-genero">
+        <img src="" alt="" class="portada-genero">
+        <p class="titulo-genero-libros"></p>
+        <p class="libro-escrito-autor"></p>
       </div>
-    </article>
-    <!-- </template> -->
+    </template>
+    
+
+
+
+
+
+
 
     <footer>
       <div id="pieDePagina">
