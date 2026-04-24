@@ -592,6 +592,50 @@ footer p {
 /*------Archivo premioNobel.html------*/
 /* ------------- DISEÑO LIBROS (Renderizados por JS) ---------------- */
 
+#filtro-anio-nacionalidad {
+  width: 100%;
+  /* border: 1px solid black; */
+}
+
+#filtro-box {
+  width: 100%;
+  margin-top: 3.3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#filtro-box label {
+  margin: 0 0.4em 0 0.82em;
+  font-size: 1.7em;
+  font-family: "Open Sans";
+}
+
+#filtro-box #nacionalidad {
+  height: 1.95em;
+}
+
+#filtro-box #campo-anio {
+  width: 9rem;
+  height: 1.95em;
+}
+
+#filtro-box button {
+  margin-left: 2.3em;
+  border: none;
+  padding: 0.7em;
+  border-radius: 9px;
+  background-color: #007bff;
+  color: #ffffff;
+  font-size: 0.87em;
+  font-family: "Open Sans";
+}
+
+button:hover {
+  background-color: #003269;
+  font-weight: bold;
+}
+
 #contenedor-nobels {
   width: 100%;
 }
@@ -612,6 +656,7 @@ footer p {
 .box-info-nobels .nombre {
   font-size: 3.2em;
   font-style: italic;
+  font-family: "Open Sans";
 }
 
 .box-info-nobels ul {
@@ -624,4 +669,23 @@ footer p {
   font-size: 1.8rem;
   text-align: center;
   margin: 1.2rem 0;
+  font-family: "Open Sans";
 }
+
+/****-------------DISEÑO GENERO LIBROS------------****/
+/********DISEÑO genero.html****/
+
+#contenedor-genero-libro {
+  width: 100%;
+}
+
+.article-genero-libro {
+  width: 100%;
+}
+
+.box-genero-libros {
+  width: 100%;
+  grid-template-columns repeat(3, 1fr);
+}
+
+
