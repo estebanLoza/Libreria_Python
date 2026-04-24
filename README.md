@@ -18,6 +18,6 @@ Ahora pongo en prácica el uso de la programación en estrucutra de datos y usan
  Para esta rama lo que hice fue poner en practica conocimientos de sql, esto con el motivo de dejar en lado el uso del json y usar db como
  algo más 'realista' pero todo haciendo desde python importando la libreria de sqlite3 y también porque no para ponerme una prueba 
 
-##👉 v3.1 Flask (🛠️)
+## v3.1 Flask👈 ( 🛠️)
 
 Agrego ahora una interfaz mucho mejor dejando a un lado la terminal para poder visualizar el menu y una sección especial para las administradores.
