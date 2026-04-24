@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if (entrada.isIntersecting) {
           entrada.target.classList.add("visible");
         } else {
-          // Remover la clase hace que la animación se repita al scrollear hacia arriba
           entrada.target.classList.remove("visible");
         }
       });
@@ -47,8 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
           cartaFragmento.querySelector(".titulo").textContent = libro.titulo;
           cartaFragmento.querySelector(".autor").textContent = libro.autor;
-          cartaFragmento.querySelector(".sinopsis").textContent =
-            libro.sinopsis;
+          cartaFragmento.querySelector(".sinopsis").textContent = libro.sinopsis;
           cartaFragmento.querySelector(".anio").textContent = libro.anio;
           cartaFragmento.querySelector(".genero").textContent = libro.genero;
 
@@ -71,16 +69,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const templateNobel = document.getElementById("template-nobel");
   const selectNacionalidad = document.getElementById("nacionalidad");
 
-  // Variable para no perder los datos originales
   let todosLosNobels = [];
 
-  // Función para llenar las opciones del filtro de nacionalidad
   function llenarSelectNacionalidades(listaDeNobels) {
-    // Usamos Set para que no haya países repetidos
     const nacionalidadesUnicas = [
       ...new Set(listaDeNobels.map((autor) => autor.nacionalidad)),
     ];
-    nacionalidadesUnicas.sort(); // Ordenamos alfabéticamente
+    nacionalidadesUnicas.sort();
 
     nacionalidadesUnicas.forEach((nacionalidad) => {
       const option = document.createElement("option");
@@ -90,9 +85,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Función para dibujar las cartas en el HTML
   function renderizarNobels(listaDeNobels) {
-    contenedorNobel.innerHTML = ""; // Limpia resultados anteriores
+    contenedorNobel.innerHTML = "";
 
     listaDeNobels.forEach((autor) => {
       const cartaFragmento = templateNobel.content.cloneNode(true);
@@ -100,8 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       cartaFragmento.querySelector(".nombre").textContent = autor.nombre;
       cartaFragmento.querySelector(".anio").textContent = autor.anio;
-      cartaFragmento.querySelector(".nacionalidad").textContent =
-        autor.nacionalidad;
+      cartaFragmento.querySelector(".nacionalidad").textContent = autor.nacionalidad;
       cartaFragmento.querySelector(".motivo").textContent = autor.motivo;
 
       nodoCarta.classList.add("scroll-suave");
@@ -110,7 +103,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Llamada principal a Flask cuando carga premioNobel.html
   if (contenedorNobel && templateNobel) {
     fetch("http://127.0.0.1:5000/api/nobel")
       .then((respuesta) => {
@@ -118,14 +110,13 @@ document.addEventListener("DOMContentLoaded", () => {
         return respuesta.json();
       })
       .then((nobels) => {
-        todosLosNobels = nobels; // Guardamos en memoria
-        renderizarNobels(todosLosNobels); // Mostramos todos al inicio
-        llenarSelectNacionalidades(todosLosNobels); // Llenamos el select
+        todosLosNobels = nobels;
+        renderizarNobels(todosLosNobels);
+        llenarSelectNacionalidades(todosLosNobels);
       })
       .catch((error) => console.error("Error al obtener nobels:", error));
   }
 
-  // Lógica del botón de Filtro
   window.filtrar = function () {
     const nacionalidadElegida = selectNacionalidad.value.toLowerCase();
     const inputAnio = document.querySelector('input[name="anio"]').value;
@@ -142,6 +133,82 @@ document.addEventListener("DOMContentLoaded", () => {
       return coincideNacionalidad && coincideAnio;
     });
 
-    renderizarNobels(nobelsFiltrados); // Dibujamos solo los que coinciden
+    renderizarNobels(nobelsFiltrados);
+  };
+
+  // ==========================================
+  // 5. LÓGICA PARA GENEROS.HTML (Flask + Filtro)
+  // ==========================================
+  const contenedorGenero = document.getElementById("contenedor-generos-libro");
+  const templateGenero = document.getElementById("template-genero");
+  const selectGenero = document.getElementById("genero-libros");
+
+  const generos = [
+    "Romance",
+    "Ficción Filosófica",
+    "Realismo Mágico",
+    "Cuento",
+    "Ficción Histórica",
+    "Fábula",
+    "Narrativa",
+  ];
+
+  if (selectGenero) {
+    generos.forEach((genero) => {
+      const option = document.createElement("option");
+      option.value = genero;
+      option.textContent = genero;
+      selectGenero.appendChild(option);
+    });
+  }
+
+  window.filtrarGenero = function () {
+    const generoElegido = selectGenero.value;
+
+    if (generoElegido === "todos") {
+      document.getElementById("genero-seleccionado").textContent = "Todos los géneros aquí en uno solo";
+
+      fetch("http://127.0.0.1:5000/api/libros")
+        .then((respuesta) => respuesta.json())
+        .then((libros) => {
+          contenedorGenero.innerHTML = "";
+          libros.forEach((libro) => {
+            const fragmento = templateGenero.content.cloneNode(true);
+            const nodo = fragmento.querySelector(".libro-box-genero");
+            fragmento.querySelector(".titulo-genero-libros").textContent = libro.titulo;
+            fragmento.querySelector(".libro-escrito-autor").textContent = libro.autor;
+            if (libro.portada) {
+              fragmento.querySelector(".portada-genero").src = libro.portada;
+            }
+            nodo.classList.add("scroll-suave");
+            nodo.classList.add("visible");
+            contenedorGenero.appendChild(fragmento);
+            observer.observe(nodo);
+          });
+        });
+      return;
+    }
+
+    document.getElementById("genero-seleccionado").textContent = `Libros de '${generoElegido}'`;
+
+    fetch(`http://127.0.0.1:5000/api/libros/genero/${encodeURIComponent(generoElegido)}`)
+      .then((respuesta) => respuesta.json())
+      .then((libros) => {
+        contenedorGenero.innerHTML = "";
+        libros.forEach((libro) => {
+          const fragmento = templateGenero.content.cloneNode(true);
+          const nodo = fragmento.querySelector(".libro-box-genero");
+          fragmento.querySelector(".titulo-genero-libros").textContent = libro.titulo;
+          fragmento.querySelector(".libro-escrito-autor").textContent = libro.autor;
+          if (libro.portada) {
+            fragmento.querySelector(".portada-genero").src = libro.portada;
+          }
+          nodo.classList.add("scroll-suave");
+          nodo.classList.add("visible");
+          contenedorGenero.appendChild(fragmento);
+          observer.observe(nodo);
+        });
+      })
+      .catch((error) => console.error("Error al obtener géneros:", error));
   };
 });
