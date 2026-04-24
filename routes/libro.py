@@ -39,3 +39,18 @@ def libros_por_autor(autor):
 
     ]
     return jsonify(resultado)
+
+
+
+@libro_bp.route("/api/libros/genero/<string:genero>")
+def libros_por_genero(genero):
+    resultado = [
+        {
+            "titulo":  libro.titulo,
+            "autor":   libro.autor,
+            "portada": libro.portada
+        }
+        for libro in catalogo.libros
+        if libro.origen_genero(genero)
+    ]
+    return jsonify(resultado)
