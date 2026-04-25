@@ -529,6 +529,42 @@ footer p {
 
 /******** DISEÑO LIBROS PÁGINA  SECTION***************/
 
+/*Filtro por autores*/
+
+#filtro-libro-autor-section {
+  width: 100%;
+  margin-top: 3.5rem;
+}
+
+#box-filtro-autor-libro-section {
+  display: flex;
+  justify-content: center;
+}
+
+#button-autor-libro-section,
+#button-reset-auto-libro {
+  margin-left: 0.3em;
+  border: none;
+  padding: 0.7em;
+  border-radius: 9px;
+  background-color: #007bff;
+  color: #ffffff;
+  font-size: 0.87em;
+  font-family: "Open Sans";
+}
+
+#button-autor-libro-section:hover,
+#button-reset-auto-libro:hover {
+  background-color: #003269;
+  font-weight: bold;
+}
+
+#busqueda-autor-libro-section {
+  height: 3.1em;
+  width: 24em;
+  border-radius: 9px;
+}
+
 .carta-libro {
   display: flex;
   width: 100%;
@@ -620,7 +656,7 @@ footer p {
   height: 1.95em;
 }
 
-#filtro-box button {
+#filtro-box #button-nobel-filtro-section {
   margin-left: 2.3em;
   border: none;
   padding: 0.7em;
@@ -631,7 +667,7 @@ footer p {
   font-family: "Open Sans";
 }
 
-button:hover {
+#button-nobel-filtro-section:hover {
   background-color: #003269;
   font-weight: bold;
 }
@@ -686,8 +722,20 @@ button:hover {
   text-align: center;
 }
 
-.button-genero-filtro {
+#button-genero-filtro {
   border: none;
+  color: #ffffff;
+  margin-left: 2.3em;
+  padding: 0.7em;
+  border-radius: 9px;
+  background-color: #007bff;
+  font-size: 0.87em;
+  font-family: "Open Sans";
+}
+
+#button-genero-filtro:hover {
+  background-color: #003269;
+  font-weight: bold;
 }
 
 /* #genero-libros option:hover { */
