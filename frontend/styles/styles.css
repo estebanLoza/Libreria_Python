@@ -901,3 +901,54 @@ footer p {
 .container .info span .fa {
   color: #ef3b3a;
 }
+
+/******------------ SECCIÓN ADMINISTRACIÓN ------- ******/
+
+/****-----menuLogin.html-------****/
+
+#titulo-administracion {
+  text-align: center;
+  font-family: "Open Sans", sans-serfi;
+  margin-top: 4rem;
+}
+
+#menu-administracion {
+  width: 100%;
+}
+
+.box-menu-administracion {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem;
+  border: 1px solid black;
+}
+
+.box-option-administracion {
+  border: 1px solid green;
+  width: 20rem;
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.box-option-administracion p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 2.2em;
+}
+
+.button-option-admin {
+  color: #ffffff;
+  background-color: #007bff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.2rem;
+  width: 7.3rem;
+  border: none;
+  border-radius: 5px;
+  margin-top: 1.2em;
+}
