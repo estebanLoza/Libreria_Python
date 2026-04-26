@@ -32,6 +32,34 @@ document.addEventListener("DOMContentLoaded", () => {
   // ==========================================
   const contenedorLibros = document.getElementById("contenedor-libros");
   const templateLibro = document.getElementById("template-libro");
+  const inputBusqueda = document.getElementById("busqueda-autor-libro-section");
+  const botonBuscar = document.getElementById("button-autor-libro-section");
+  const botonReset = document.getElementById("button-reset-auto-libro");
+
+  let todosLosLibros = [];
+
+  function renderizarLibros(lista) {
+    contenedorLibros.innerHTML = "";
+
+    lista.forEach((libro) => {
+      const cartaFragmento = templateLibro.content.cloneNode(true);
+      const nodoCarta = cartaFragmento.querySelector(".carta-libro");
+
+      cartaFragmento.querySelector(".titulo").textContent = libro.titulo;
+      cartaFragmento.querySelector(".autor").textContent = libro.autor;
+      cartaFragmento.querySelector(".sinopsis").textContent = libro.sinopsis;
+      cartaFragmento.querySelector(".anio").textContent = libro.anio;
+      cartaFragmento.querySelector(".genero").textContent = libro.genero;
+
+      if (libro.portada) {
+        cartaFragmento.querySelector(".portada").src = libro.portada;
+      }
+
+      nodoCarta.classList.add("scroll-suave");
+      contenedorLibros.appendChild(cartaFragmento);
+      observer.observe(nodoCarta);
+    });
+  }
 
   if (contenedorLibros && templateLibro) {
     fetch("http://127.0.0.1:5000/api/libros")
@@ -40,26 +68,44 @@ document.addEventListener("DOMContentLoaded", () => {
         return respuesta.json();
       })
       .then((libros) => {
-        libros.forEach((libro) => {
-          const cartaFragmento = templateLibro.content.cloneNode(true);
-          const nodoCarta = cartaFragmento.querySelector(".carta-libro");
+        todosLosLibros = libros;
+        renderizarLibros(todosLosLibros);
 
-          cartaFragmento.querySelector(".titulo").textContent = libro.titulo;
-          cartaFragmento.querySelector(".autor").textContent = libro.autor;
-          cartaFragmento.querySelector(".sinopsis").textContent = libro.sinopsis;
-          cartaFragmento.querySelector(".anio").textContent = libro.anio;
-          cartaFragmento.querySelector(".genero").textContent = libro.genero;
-
-          if (libro.portada) {
-            cartaFragmento.querySelector(".portada").src = libro.portada;
-          }
-
-          nodoCarta.classList.add("scroll-suave");
-          contenedorLibros.appendChild(cartaFragmento);
-          observer.observe(nodoCarta);
-        });
+        // Llena el datalist con autores únicos
+        const autoresUnicos = [...new Set(libros.map((l) => l.autor))];
+        const datalist = document.getElementById("sugerencias-autores");
+        if (datalist) {
+          autoresUnicos.forEach((autor) => {
+            const option = document.createElement("option");
+            option.value = autor;
+            datalist.appendChild(option);
+          });
+        }
       })
       .catch((error) => console.error("Error al obtener libros:", error));
+
+    // Busca al hacer click en Buscar
+    if (botonBuscar) {
+      botonBuscar.addEventListener("click", () => {
+        const busqueda = inputBusqueda.value.toLowerCase().trim();
+        if (busqueda === "") {
+          renderizarLibros(todosLosLibros);
+          return;
+        }
+        const filtrados = todosLosLibros.filter((libro) =>
+          libro.autor.toLowerCase().includes(busqueda),
+        );
+        renderizarLibros(filtrados);
+      });
+    }
+
+    // Reset — limpia y muestra todos
+    if (botonReset) {
+      botonReset.addEventListener("click", () => {
+        inputBusqueda.value = "";
+        renderizarLibros(todosLosLibros);
+      });
+    }
   }
 
   // ==========================================
@@ -94,7 +140,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       cartaFragmento.querySelector(".nombre").textContent = autor.nombre;
       cartaFragmento.querySelector(".anio").textContent = autor.anio;
-      cartaFragmento.querySelector(".nacionalidad").textContent = autor.nacionalidad;
+      cartaFragmento.querySelector(".nacionalidad").textContent =
+        autor.nacionalidad;
       cartaFragmento.querySelector(".motivo").textContent = autor.motivo;
 
       nodoCarta.classList.add("scroll-suave");
@@ -166,7 +213,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const generoElegido = selectGenero.value;
 
     if (generoElegido === "todos") {
-      document.getElementById("genero-seleccionado").textContent = "Todos los géneros aquí en uno solo";
+      document.getElementById("genero-seleccionado").textContent =
+        "Todos los géneros aquí en uno solo";
 
       fetch("http://127.0.0.1:5000/api/libros")
         .then((respuesta) => respuesta.json())
@@ -175,8 +223,10 @@ document.addEventListener("DOMContentLoaded", () => {
           libros.forEach((libro) => {
             const fragmento = templateGenero.content.cloneNode(true);
             const nodo = fragmento.querySelector(".libro-box-genero");
-            fragmento.querySelector(".titulo-genero-libros").textContent = libro.titulo;
-            fragmento.querySelector(".libro-escrito-autor").textContent = libro.autor;
+            fragmento.querySelector(".titulo-genero-libros").textContent =
+              libro.titulo;
+            fragmento.querySelector(".libro-escrito-autor").textContent =
+              libro.autor;
             if (libro.portada) {
               fragmento.querySelector(".portada-genero").src = libro.portada;
             }
@@ -189,17 +239,22 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    document.getElementById("genero-seleccionado").textContent = `Libros de '${generoElegido}'`;
+    document.getElementById("genero-seleccionado").textContent =
+      `Libros de '${generoElegido}'`;
 
-    fetch(`http://127.0.0.1:5000/api/libros/genero/${encodeURIComponent(generoElegido)}`)
+    fetch(
+      `http://127.0.0.1:5000/api/libros/genero/${encodeURIComponent(generoElegido)}`,
+    )
       .then((respuesta) => respuesta.json())
       .then((libros) => {
         contenedorGenero.innerHTML = "";
         libros.forEach((libro) => {
           const fragmento = templateGenero.content.cloneNode(true);
           const nodo = fragmento.querySelector(".libro-box-genero");
-          fragmento.querySelector(".titulo-genero-libros").textContent = libro.titulo;
-          fragmento.querySelector(".libro-escrito-autor").textContent = libro.autor;
+          fragmento.querySelector(".titulo-genero-libros").textContent =
+            libro.titulo;
+          fragmento.querySelector(".libro-escrito-autor").textContent =
+            libro.autor;
           if (libro.portada) {
             fragmento.querySelector(".portada-genero").src = libro.portada;
           }
@@ -211,4 +266,41 @@ document.addEventListener("DOMContentLoaded", () => {
       })
       .catch((error) => console.error("Error al obtener géneros:", error));
   };
+
+  // ==========================================
+  // 6. LÓGICA PARA ADMINSTRADORES.html
+  // ==========================================
+
+  // En script.js — sección 6
+  const loginForm = document.querySelector(".login-form");
+
+  if (loginForm) {
+    loginForm.addEventListener("submit", (e) => {
+      e.preventDefault(); // evita que recargue la página
+
+      const usuario = document.querySelector(
+        ".login-form input[type='text']",
+      ).value;
+      const password = document.querySelector(
+        ".login-form input[type='password']",
+      ).value;
+
+      fetch("http://127.0.0.1:5000/api/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ usuario, password }),
+      })
+        .then((respuesta) => respuesta.json())
+        .then((datos) => {
+          if (datos.ok) {
+            // Redirige al panel de admin
+            window.location.href = "loginSection/menuLogin.html";
+          } else {
+            alert(datos.mensaje);
+          }
+        })
+        .catch((error) => console.error("Error en login:", error));
+    });
+  }
 });
+
