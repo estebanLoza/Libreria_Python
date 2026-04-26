@@ -302,5 +302,48 @@ document.addEventListener("DOMContentLoaded", () => {
         .catch((error) => console.error("Error en login:", error));
     });
   }
-});
 
+  // ==========================================
+  //                SECTION ADMINISTRADOR
+  // ==========================================
+
+  //==================================
+  //      1.- menuLogin.html LOGICA
+  //==================================
+
+  //=======================================================
+  //navegación a Buscar Usuarios (buscarUsuariosAdmin.html)
+  //=======================================================
+
+  // Navegación a Buscar Usuarios
+const btnBuscar = document.getElementById("button-buscarUsuario");
+if (btnBuscar) {
+    btnBuscar.onclick = function() {
+        window.location.href = "buscarUsuariosAdmin.html";
+    };
+}
+
+// Navegación Libros Vencidos (Ojo: sin la "s" extra para que coincida con tu HTML)
+const btnVencidos = document.getElementById("button-libroVencidos");
+if (btnVencidos) {
+    btnVencidos.onclick = function() {
+        window.location.href = "librosVencidosAdmin.html";
+    };
+}
+
+// Navegación Libros Activos
+const btnActivos = document.getElementById("button-libroActivos");
+if (btnActivos) {
+    btnActivos.onclick = function() {
+        window.location.href = "librosActivosAdmin.html";
+    };
+}
+
+// Navegación Multas (Cambiado a getElementById y cerrada la llave)
+const btnMultas = document.getElementById("button-multasAdmin");
+if (btnMultas) {
+    btnMultas.onclick = function() {
+        window.location.href = "multasAdmin.html";
+    };
+}
+});
