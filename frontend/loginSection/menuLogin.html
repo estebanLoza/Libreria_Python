@@ -1,34 +1,34 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Fuente Courier Prime ---->
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
       href="https://fonts.googleapis.com/css2?family=Courgette&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
-    />
+>
 
     <!--- Fuente Opens Sans --->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
       href="https://fonts.googleapis.com/css2?family=Courgette&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
-    />
+>
 
     <!--- FONT AWESOME --->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
+>
 
     <title>Nobels</title>
-    <link href="../styles/styles.css" rel="stylesheet" />
+    <link href="../styles/styles.css" rel="stylesheet">
   </head>
   <body>
     <!--Seccion de Cabeza de la página y menu-->
@@ -39,11 +39,11 @@
         </div>
         <div id="boxMenu">
           <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="libros.html">Libros</a></li>
-            <li><a href="premioNobel.html">Nobels</a></li>
-            <li><a href="generos.html">Generos</a></li>
-            <li><a href="administradores.html">Login</a></li>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../libros.html">Libros</a></li>
+            <li><a href="../premioNobel.html">Nobels</a></li>
+            <li><a href="../generos.html">Generos</a></li>
+            <li><a href="../administradores.html">Login</a></li>
           </ul>
         </div>
       </div>
@@ -59,31 +59,43 @@
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
           <p>Buscar Usuarios</p>
-          <button class="button-option-admin" type="submit">Ir</button>
+          <button
+            id="button-buscarUsuario"
+            class="button-option-admin"
+            type="submit"
+          >
+            Ir
+          </button>
         </div>
         <!---Segunda Caja "Libros Vencidos" ---->
         <div class="box-option-administracion">
           <div id="box-img-libroVencidos">
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-x"></i>
           </div>
           <p>Libros Vencidos</p>
-          <button class="button-option-admin" type="submit">Ir</button>
+          <button 
+          id="button-libroVencidos"
+          class="button-option-admin" type="submit">Ir</button>
         </div>
         <!---Tercera Section "Libros Activos" --->
         <div class="box-option-administracion">
           <div id="box-img-librosActivos">
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-check"></i>
           </div>
           <p>Libros Activos</p>
-          <button class="button-option-admin" type="submit">Ir</button>
+          <button
+          id="button-libroActivos"
+          class="button-option-admin" type="submit">Ir</button>
         </div>
         <!--Cuarta Caja "Multas" ---->
         <div class="box-option-administracion">
           <div id="box-img-multas">
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-book"></i>
           </div>
           <p>Multas</p>
-          <button class="button-option-admin" type="submit">Ir</button>
+          <button
+          id="button-multasAdmin"
+          class="button-option-admin" type="submit">Ir</button>
         </div>
       </div>
     </section>
