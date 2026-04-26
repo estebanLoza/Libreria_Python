@@ -43,20 +43,28 @@
       </div>
     </header>
 
+    <!--Este filtro sirve para buscar por nombre del autor-->
     <section id="filtro-libro-autor-section">
       <div id="box-filtro-autor-libro-section">
-        <form action="/buscar" method="get">
+        <label id="busqueda-escritor-titulo-libro" for="Busqueda"
+          >Busqueda por Escritor</label
+        >
+
+        <div class="box-filtros-libros-section">
           <input
             id="busqueda-autor-libro-section"
             type="text"
-            placeholder="Buscar Esritor..."
+            placeholder="Buscar por Escritor..."
             name=""
             value=""
+            list="sugerencias-autores"
 >
+          <datalist id="sugerencias-autores"> </datalist>
+
           <button id="button-autor-libro-section" type="submit">Buscar</button>
           <!--Botón reset -->
           <button type="reset" id="button-reset-auto-libro">Limipiar</button>
-        </form>
+        </div>
       </div>
     </section>
 
