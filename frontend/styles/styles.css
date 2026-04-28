@@ -926,6 +926,13 @@ footer p {
   /* border: 1px solid black; */
 }
 
+#box-img-busquedaUsuarios,
+#box-img-libroVencidos,
+#box-img-librosActivos,
+#box-img-multas {
+  padding: 1.3rem;
+}
+
 .box-option-administracion {
   /* border: 1px solid green; */
   width: 20rem;
@@ -940,6 +947,7 @@ footer p {
 .box-option-administracion p {
   font-family: "Open Sans", sans-serif;
   font-size: 1.83em;
+  font-style: italic;
 }
 
 .button-option-admin {
@@ -950,6 +958,7 @@ footer p {
   width: 7.3rem;
   border: none;
   border-radius: 5px;
+  margin-top: 0.55rem;
 }
 
 .button-option-admin:hover {
