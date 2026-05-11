@@ -1,5 +1,44 @@
 document.addEventListener("DOMContentLoaded", () => {
   // ==========================================
+  // MENÚ HAMBURGUESA
+  // ==========================================
+  const btnHamburguesa = document.getElementById("btn-hamburguesa");
+  const menuNav = document.getElementById("boxMenu");
+  if (btnHamburguesa) {
+    btnHamburguesa.addEventListener("click", () => {
+      btnHamburguesa.classList.toggle("abierto");
+      menuNav.classList.toggle("menu-abierto");
+    });
+  }
+
+  // ==========================================
+  // HEADER — Ocultar al bajar, mostrar al subir
+  // ==========================================
+  let ultimoScroll = 0;
+  const header = document.querySelector("header");
+
+  window.addEventListener("scroll", () => {
+    const scrollActual = window.scrollY;
+
+    if (scrollActual <= 0) {
+      header.classList.remove("header-oculto");
+      return;
+    }
+
+    if (scrollActual > ultimoScroll) {
+      header.classList.add("header-oculto");
+      if (btnHamburguesa && menuNav) {
+        btnHamburguesa.classList.remove("abierto");
+        menuNav.classList.remove("menu-abierto");
+      }
+    } else {
+      header.classList.remove("header-oculto");
+    }
+
+    ultimoScroll = scrollActual;
+  });
+
+  // ==========================================
   // 1. OBSERVADOR DE SCROLL (Para todas las páginas)
   // ==========================================
   const observer = new IntersectionObserver(
@@ -71,7 +110,6 @@ document.addEventListener("DOMContentLoaded", () => {
         todosLosLibros = libros;
         renderizarLibros(todosLosLibros);
 
-        // Llena el datalist con autores únicos
         const autoresUnicos = [...new Set(libros.map((l) => l.autor))];
         const datalist = document.getElementById("sugerencias-autores");
         if (datalist) {
@@ -84,7 +122,6 @@ document.addEventListener("DOMContentLoaded", () => {
       })
       .catch((error) => console.error("Error al obtener libros:", error));
 
-    // Busca al hacer click en Buscar
     if (botonBuscar) {
       botonBuscar.addEventListener("click", () => {
         const busqueda = inputBusqueda.value.toLowerCase().trim();
@@ -99,7 +136,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
 
-    // Reset — limpia y muestra todos
     if (botonReset) {
       botonReset.addEventListener("click", () => {
         inputBusqueda.value = "";
@@ -268,15 +304,13 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   // ==========================================
-  // 6. LÓGICA PARA ADMINSTRADORES.html
+  // 6. LÓGICA PARA ADMINISTRADORES.html
   // ==========================================
-
-  // En script.js — sección 6
   const loginForm = document.querySelector(".login-form");
 
   if (loginForm) {
     loginForm.addEventListener("submit", (e) => {
-      e.preventDefault(); // evita que recargue la página
+      e.preventDefault();
 
       const usuario = document.querySelector(
         ".login-form input[type='text']",
@@ -293,7 +327,6 @@ document.addEventListener("DOMContentLoaded", () => {
         .then((respuesta) => respuesta.json())
         .then((datos) => {
           if (datos.ok) {
-            // Redirige al panel de admin
             window.location.href = "loginSection/menuLogin.html";
           } else {
             alert(datos.mensaje);
@@ -304,18 +337,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ==========================================
-  //                SECTION ADMINISTRADOR
+  // SECTION ADMINISTRADOR — menuLogin.html
   // ==========================================
-
-  //==================================
-  //      1.- menuLogin.html LOGICA
-  //==================================
-
-  //=======================================================
-  //navegación a Buscar Usuarios (buscarUsuariosAdmin.html)
-  //=======================================================
-
-  // Navegación a Buscar Usuarios
   const btnBuscar = document.getElementById("button-buscarUsuario");
   if (btnBuscar) {
     btnBuscar.onclick = function () {
@@ -323,7 +346,6 @@ document.addEventListener("DOMContentLoaded", () => {
     };
   }
 
-  // Navegación Libros Vencidos (Ojo: sin la "s" extra para que coincida con tu HTML)
   const btnVencidos = document.getElementById("button-libroVencidos");
   if (btnVencidos) {
     btnVencidos.onclick = function () {
@@ -331,7 +353,6 @@ document.addEventListener("DOMContentLoaded", () => {
     };
   }
 
-  // Navegación Libros Activos
   const btnActivos = document.getElementById("button-libroActivos");
   if (btnActivos) {
     btnActivos.onclick = function () {
@@ -339,7 +360,6 @@ document.addEventListener("DOMContentLoaded", () => {
     };
   }
 
-  // Navegación Multas (Cambiado a getElementById y cerrada la llave)
   const btnMultas = document.getElementById("button-multasAdmin");
   if (btnMultas) {
     btnMultas.onclick = function () {
@@ -347,10 +367,9 @@ document.addEventListener("DOMContentLoaded", () => {
     };
   }
 
-  // =============================================
+  // ==========================================
   // LÓGICA PARA buscarUsuariosAdmin.html
-  // =============================================
-
+  // ==========================================
   const listaUsuarios = document.getElementById("lista-usuarios-UsuariosAdm");
   const templateUsuario = document.getElementById("template-usuario");
 
@@ -366,7 +385,6 @@ document.addEventListener("DOMContentLoaded", () => {
           fragmento.querySelector(".id-usuario-admin").textContent =
             `     ID:      ${usuario.id}`;
 
-          //Llena los libros prestados de cada usuario
           const lista = fragmento.querySelector(".lista-libros-prestados");
           usuario.librosPrestados.forEach((prestamo) => {
             const li = document.createElement("li");
@@ -377,14 +395,12 @@ document.addEventListener("DOMContentLoaded", () => {
           listaUsuarios.appendChild(fragmento);
         });
       })
-
       .catch((error) => console.error("Error al obtener usuarios:", error));
   }
 
-  //========================================================
+  // ==========================================
   // LÓGICA PARA librosVencidosAdmin.html
-  //=======================================================
-
+  // ==========================================
   const listaVencidos = document.getElementById(
     "menu-administracion-librosVencidos",
   );
@@ -401,10 +417,10 @@ document.addEventListener("DOMContentLoaded", () => {
             `🙍‍♂ Usuario: ${prestamo.nombre}`;
           fragmento.querySelector(
             ".libroVencido-Usuario-adminUsuario",
-          ).textContent = `📖 Libro:  ${prestamo.libro}`;
+          ).textContent = `📖 Libro: ${prestamo.libro}`;
           fragmento.querySelector(
             ".fechaVencido-Usuario-adminUsuario",
-          ).textContent = `📅 Vencido: 2026-04-01`;
+          ).textContent = `📅 Vencido: ${prestamo.fecha_vencimiento}`;
 
           listaVencidos.appendChild(fragmento);
         });
@@ -412,10 +428,9 @@ document.addEventListener("DOMContentLoaded", () => {
       .catch((error) => console.error("Error al obtener vencidos:", error));
   }
 
-  // ========================================
+  // ==========================================
   // LÓGICA PARA librosActivosAdmin.html
-  // ========================================
-
+  // ==========================================
   const listaActivos = document.getElementById(
     "menu-administracion-librosActivos",
   );
@@ -443,10 +458,9 @@ document.addEventListener("DOMContentLoaded", () => {
       .catch((error) => console.error("Error al obtener activos:", error));
   }
 
-  //==============================================
+  // ==========================================
   // LÓGICA PARA multasAdmin.html
-  //==============================================
-
+  // ==========================================
   const listaMultas = document.getElementById("menu-administracion-multas");
   const templateMultas = document.getElementById("template-multas");
 
