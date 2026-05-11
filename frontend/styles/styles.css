@@ -1027,13 +1027,21 @@ footer p {
   font-size: 1.2rem;
 }
 
-/***------librosVencidosAdmin.html*****----***/
+/***------librosVencidosAdmin.html
+ *        
+ *        librosActivosAdmin.html
+ *
+ * *****----***/
 
-.box-info-librosVencidos {
+.box-info-librosVencidos,
+.box-info-librosActivos,
+.box-info-multas {
   margin: 1.32rem 0rem 1.32rem 3rem;
 }
 
-.box-info-librosVencidos ul {
+.box-info-librosVencidos ul,
+.box-info-librosActivos ul,
+.box-info-multas ul {
   list-style: none;
   font-family: "Open Sans";
   font-size: 1.32rem;
