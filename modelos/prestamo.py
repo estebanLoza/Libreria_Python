@@ -24,7 +24,7 @@ class Prestamo:
         return (
             f"Usuario: {self.nombre}\n"
             f"Libro: {self.libro}\n"
-            f"Vence: {self.Fecha_vencimiento}\n"
+            f"Vence: {self.fecha_vencimiento}\n"
             f"Activo: {self.activo}"
         )
     
