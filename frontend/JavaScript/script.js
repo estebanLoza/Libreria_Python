@@ -411,4 +411,60 @@ document.addEventListener("DOMContentLoaded", () => {
       })
       .catch((error) => console.error("Error al obtener vencidos:", error));
   }
+
+  // ========================================
+  // LÓGICA PARA librosActivosAdmin.html
+  // ========================================
+
+  const listaActivos = document.getElementById(
+    "menu-administracion-librosActivos",
+  );
+  const templateActivos = document.getElementById("template-libros-activos");
+
+  if (listaActivos && templateActivos) {
+    fetch("http://127.0.0.1:5000/api/usuarios/activos")
+      .then((respuesta) => respuesta.json())
+      .then((activos) => {
+        activos.forEach((prestamo) => {
+          const fragmento = templateActivos.content.cloneNode(true);
+
+          fragmento.querySelector(".nombre-Usuario-adminUsuario").textContent =
+            `🙍‍♂️ Usuario: ${prestamo.nombre}`;
+          fragmento.querySelector(
+            ".libroActivos-Usuario-adminUsuario",
+          ).textContent = `📖 Libro: ${prestamo.libro}`;
+          fragmento.querySelector(
+            ".fechaProxVencer-Usuario-adminUsuario",
+          ).textContent = `📅 Vence: ${prestamo.fecha_vencimiento}`;
+
+          listaActivos.appendChild(fragmento);
+        });
+      })
+      .catch((error) => console.error("Error al obtener activos:", error));
+  }
+
+  //==============================================
+  // LÓGICA PARA multasAdmin.html
+  //==============================================
+
+  const listaMultas = document.getElementById("menu-administracion-multas");
+  const templateMultas = document.getElementById("template-multas");
+
+  if (listaMultas && templateMultas) {
+    fetch("http://127.0.0.1:5000/api/usuarios/multas")
+      .then((respuesta) => respuesta.json())
+      .then((multas) => {
+        multas.forEach((usuario) => {
+          const fragmento = templateMultas.content.cloneNode(true);
+
+          fragmento.querySelector(".nombre-Usuario-multa").textContent =
+            `🙍‍♂️ Usuario: ${usuario.nombre}`;
+          fragmento.querySelector(".total-multa-Usuario").textContent =
+            `💰 Multa total: $${usuario.multa_total}`;
+
+          listaMultas.appendChild(fragmento);
+        });
+      })
+      .catch((error) => console.error("Error al obtener multas:", error));
+  }
 });
