@@ -110,6 +110,31 @@ header {
   margin-bottom: 0.5em;
 }
 
+/*Boton de Area administrador */
+
+.box-button-atras-UsuAdmin {
+  margin: 0.83rem 0;
+  width: 100%;
+}
+
+.box-button-atras-UsuAdmin a {
+  display: inline-block; /**Para poder modificar el tamaño*/
+  margin-left: 2.32rem;
+  text-decoration: none;
+  font-family: "Open Sans";
+  color: #ffff;
+  padding: 1.2rem;
+  background-color: #007bff;
+  border-radius: 9px;
+  width: 15%;
+  margin: 2.2rem;
+  text-align: center;
+}
+
+.box-button-atras-UsuAdmin a:hover {
+  background-color: #003269;
+}
+
 /*----------------------- Diseño general ---------- */
 
 /*Diseño del carrete automatica de Galeria*/
@@ -948,6 +973,7 @@ footer p {
   font-family: "Open Sans", sans-serif;
   font-size: 1.83em;
   font-style: italic;
+  font-weight: bold;
 }
 
 .button-option-admin {
@@ -968,4 +994,47 @@ footer p {
 .fa-solid {
   /*Iconos de admin*/
   font-size: 3.32rem;
+}
+
+/******----- Buscar Usuarios Administradores-----------*********/
+/***---buscarUsuarioAdmin.html---***/
+
+.box-usuarios-admin-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 1.32rem;
+  margin-left: 25%;
+  margin-bottom: 2.2rem;
+  height: auto;
+}
+
+.box-usuario-info-admin {
+  margin-left: 0.82em;
+}
+
+.nombre-usuario-admin {
+  font-size: 2.3rem;
+  font-family: "Open Sans";
+  margin-bottom: 1.2rem;
+}
+
+.box-libros-prestados-Usuario {
+  margin-top: 1.2rem;
+}
+
+.box-libros-prestados-Usuario ul li {
+  font-family: "Open Sans";
+  font-size: 1.2rem;
+}
+
+/***------librosVencidosAdmin.html*****----***/
+
+.box-info-librosVencidos {
+  margin: 1.32rem 0rem 1.32rem 3rem;
+}
+
+.box-info-librosVencidos ul {
+  list-style: none;
+  font-family: "Open Sans";
+  font-size: 1.32rem;
 }
