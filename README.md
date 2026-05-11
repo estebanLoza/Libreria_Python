@@ -81,7 +81,7 @@ La API corre en `http://127.0.0.1:5000`
 
 ## Video Interacción de la Página Web
 
-<img width="400" height="213" alt="Escritores - Brave 2026-05-11 01-46-59" src="https://github.com/user-attachments/assets/8a4781e6-47a2-41d2-a76b-dd5c384ecc32" />
+<img width="600" height="213" alt="Escritores - Brave 2026-05-11 01-46-59" src="https://github.com/user-attachments/assets/8a4781e6-47a2-41d2-a76b-dd5c384ecc32" />
 
 
 
