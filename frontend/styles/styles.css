@@ -33,18 +33,25 @@ footer {
   background-color: #636363;
 }
 
-/**  Diseño de la Cabecera ***/
-
+/**  Diseño de la Cabecera — UNIFICADO ***/
+width: 100%;
 header {
-  width: 100%;
   height: 10em;
-  /* border: 1px solid black; */
+  position: sticky;
+  top: 0;
+  background-color: white;
+  overflow: visible;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+header.header-oculto {
+  transform: translateY(-100%);
 }
 
 #boxHeaderMenu {
   width: 100%;
   height: 100%;
-  /* border: 1px solid blue; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,8 +62,8 @@ header {
 #boxTitulo {
   width: 100%;
   padding-top: 2.54em;
-  /* border: 1px solid purple; */
 }
+
 #boxTitulo p {
   text-align: center;
   font-size: 5em;
@@ -86,7 +93,6 @@ header {
   color: blue;
 }
 
-/*transaccion desde el centro */
 #boxMenu ul li a::after {
   content: "";
   position: absolute;
@@ -118,7 +124,7 @@ header {
 }
 
 .box-button-atras-UsuAdmin a {
-  display: inline-block; /**Para poder modificar el tamaño*/
+  display: inline-block;
   margin-left: 2.32rem;
   text-decoration: none;
   font-family: "Open Sans";
@@ -137,7 +143,6 @@ header {
 
 /*----------------------- Diseño general ---------- */
 
-/*Diseño del carrete automatica de Galeria*/
 .galeria {
   width: 90%;
   max-width: 400px;
@@ -146,16 +151,14 @@ header {
   margin: 50px auto 0;
   overflow: hidden;
   border-radius: 12px;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Le da profundidad */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .galeria ul {
   display: flex;
   padding: 0;
   width: 400%;
-
   animation: slide 20s infinite alternate ease-in-out;
-  /* border: 1px solid red; */
 }
 
 .galeria li {
@@ -166,7 +169,6 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border: 1px solid green; */
 }
 
 .texto {
@@ -190,10 +192,9 @@ header {
   object-fit: cover;
   margin: auto 0;
   display: block;
-  filter: brightness(65%); /* 50% de brillo = más oscuro */
+  filter: brightness(65%);
 }
 
-/**Animación*/
 @keyframes slide {
   0% {
     margin-left: 0;
@@ -201,15 +202,12 @@ header {
   20% {
     margin-left: 0;
   }
-
   25% {
     margin-left: -100%;
   }
-
   45% {
     margin-left: -100%;
   }
-
   50% {
     margin-left: -200%;
   }
@@ -224,38 +222,28 @@ header {
   }
 }
 
-/*Seccion 2 Ganadores de premio nobel */
-
 @media (max-width: 991px) {
   .galeria {
     width: 100%;
   }
-
   .texto {
     top: 50px;
     padding: 0 25px;
   }
-
   .texto h2 {
     font-size: 35px;
     margin-bottom: 15px;
   }
-
   .texto p {
     font-size: 15px;
   }
 }
 
-/*------- Diseño Seccion 3 --------*/
-/*      Exponentes de LatinoAmerica */
-
 section:nth-child(2) {
   width: 100%;
-  /* border: 2px solid black; */
 }
 
 #tituloLatinos {
-  /* border: 1px solid red; */
   padding: 2.3em;
   margin-top: 1.5em;
 }
@@ -264,11 +252,9 @@ section:nth-child(2) {
   display: flex;
   width: 100%;
   padding: 2em 5em;
-  /* border: 1px solid red; */
 }
 
 .imgGanadorNobel {
-  /* border: 1px solid plum; */
   width: 50%;
   height: 28em;
 }
@@ -280,7 +266,6 @@ section:nth-child(2) {
 }
 
 #info-exponentes {
-  /* border: 1px solid saddlebrown; */
   width: 50%;
   margin-left: auto;
   display: flex;
@@ -288,9 +273,10 @@ section:nth-child(2) {
   justify-content: center;
   padding: 3.5em;
 }
+
 #info-exponentes p {
   font-size: 1.5em;
-  margin-bottom: 1.5em; /*Espacio entre parrafo*/
+  margin-bottom: 1.5em;
   font-family: "Opens Sans";
   margin-left: 1rem;
 }
@@ -306,7 +292,7 @@ section:nth-child(2) {
   text-decoration: none;
   border-radius: 6px;
   line-height: 2em;
-  border: 1px solid black; /*necesario para hacer la animcacion en hover*/
+  border: 1px solid black;
   font-size: 1.5em;
   font-family: Arial;
   transition:
@@ -322,11 +308,8 @@ section:nth-child(2) {
   font-weight: bold;
 }
 
-/*** Seccion 3 cartas diseño***/
-
 section:nth-child(3) {
   width: 100%;
-  /* border: 1px solid red; */
 }
 
 .titulo3 {
@@ -336,7 +319,6 @@ section:nth-child(3) {
 #contenedor-cartas {
   height: auto;
   width: 100%;
-  /* position: relative; */
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("../img/library.jpg");
@@ -370,7 +352,6 @@ section:nth-child(3) {
 }
 
 .card_content {
-  /* border: 1px solid black; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -435,10 +416,7 @@ section:nth-child(3) {
   cursor: pointer;
 }
 
-/*Renovación de Credencial*/
-
 #renovacionID {
-  /* margin-top: 2.3rem; */
   width: 100%;
   height: 37em;
   background-image:
@@ -454,7 +432,6 @@ section:nth-child(3) {
 }
 
 #box-info {
-  /* border: 1px solid white; */
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -466,7 +443,6 @@ section:nth-child(3) {
   font-family: "Open Sans";
   font-style: italic;
   font-weight: bold;
-  /* text-align: center; */
 }
 
 #box-info p {
@@ -493,8 +469,6 @@ section:nth-child(3) {
   background-color: #003269;
 }
 
-/*Mapa Seccion */
-
 #sectionMap {
   width: 100%;
 }
@@ -508,13 +482,10 @@ section:nth-child(3) {
   width: 100%;
   height: 40em;
 }
-
 #mapa-box iframe {
   width: 100%;
   height: 100%;
 }
-
-/*Seccion Pie de Página*/
 
 footer {
   background-color: #3f3d3d;
@@ -550,11 +521,7 @@ footer p {
   color: white;
 }
 
-/*** -----------------     DISEÑO libro.html --------------------*/
-
-/******** DISEÑO LIBROS PÁGINA  SECTION***************/
-
-/*Filtro por autores*/
+/*** DISEÑO libro.html ***/
 
 #filtro-libro-autor-section {
   width: 100%;
@@ -604,12 +571,11 @@ footer p {
 .carta-libro {
   display: flex;
   width: 100%;
-  height: auto; /*Como es una caja que abarca esto, pues así aumentara automaticamente*/
+  height: auto;
   padding: 3.2rem;
 }
 
 .box-img-libroSection {
-  /* border: 1px solid black; */
   width: 25%;
 }
 
@@ -660,13 +626,10 @@ footer p {
   font-style: italic;
 }
 
-/*-------------DISEÑO PREMIOS NOBEL ----------------*/
-/*------Archivo premioNobel.html------*/
-/* ------------- DISEÑO LIBROS (Renderizados por JS) ---------------- */
+/*** DISEÑO PREMIOS NOBEL ***/
 
 #filtro-anio-nacionalidad {
   width: 100%;
-  /* border: 1px solid black; */
 }
 
 #filtro-box {
@@ -686,7 +649,6 @@ footer p {
 #filtro-box #nacionalidad {
   height: 1.95em;
 }
-
 #filtro-box #campo-anio {
   width: 9rem;
   height: 1.95em;
@@ -721,7 +683,6 @@ footer p {
 }
 
 .box-info-nobels {
-  /* border: 1px solid black; */
   padding: 0 9em;
 }
 
@@ -744,8 +705,7 @@ footer p {
   font-family: "Open Sans";
 }
 
-/****-------------DISEÑO GENERO LIBROS------------****/
-/********DISEÑO genero.html****/
+/*** DISEÑO GENERO LIBROS ***/
 
 #genero-libros {
   width: 13em;
@@ -774,10 +734,6 @@ footer p {
   font-weight: bold;
 }
 
-/* #genero-libros option:hover { */
-/*   background-color: #007bff; */
-/* } */
-
 #contenedor-generos-libro {
   width: 100%;
   display: grid;
@@ -790,7 +746,7 @@ footer p {
 .titulo-genero-seleccionado {
   width: 100%;
   margin-top: 4.3em;
-  grid-column: 1 / -1; /* ocupa todo el ancho, no entra al grid */
+  grid-column: 1 / -1;
 }
 
 .titulo-genero-seleccionado #genero-seleccionado {
@@ -828,8 +784,7 @@ footer p {
   text-align: center;
 }
 
-/****---------------- DISEÑO LOGIN SECTION----------------*******/
-/*administrasdores.html*/
+/*** DISEÑO LOGIN SECTION ***/
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
@@ -838,6 +793,7 @@ footer p {
   padding: 8% 0 0;
   margin: auto;
 }
+
 .form {
   position: relative;
   z-index: 1;
@@ -850,6 +806,7 @@ footer p {
     0 0 20px 0 rgba(0, 0, 0, 0.2),
     0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
+
 .form input {
   font-family: "Roboto", sans-serif;
   outline: 0;
@@ -861,6 +818,7 @@ footer p {
   box-sizing: border-box;
   font-size: 14px;
 }
+
 .form button {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
@@ -871,15 +829,16 @@ footer p {
   padding: 15px;
   color: #ffffff;
   font-size: 14px;
-  -webkit-transition: all 0.3 ease;
   transition: all 0.3 ease;
   cursor: pointer;
 }
+
 .form button:hover,
 .form button:active,
 .form button:focus {
   background: #007ccc;
 }
+
 .form .message {
   margin: 15px 0 0;
   color: #b3b3b3;
@@ -892,6 +851,7 @@ footer p {
 .form .register-form {
   display: none;
 }
+
 .container {
   position: relative;
   z-index: 1;
@@ -927,13 +887,11 @@ footer p {
   color: #ef3b3a;
 }
 
-/******------------ SECCIÓN ADMINISTRACIÓN ------- ******/
-
-/****-----menuLogin.html-------****/
+/*** SECCIÓN ADMINISTRACIÓN ***/
 
 #titulo-administracion {
   text-align: center;
-  font-family: "Open Sans", sans-serfi;
+  font-family: "Open Sans", sans-serif;
   margin-top: 4rem;
 }
 
@@ -948,7 +906,6 @@ footer p {
   align-items: center;
   padding: 2rem;
   gap: 2rem;
-  /* border: 1px solid black; */
 }
 
 #box-img-busquedaUsuarios,
@@ -959,7 +916,6 @@ footer p {
 }
 
 .box-option-administracion {
-  /* border: 1px solid green; */
   width: 20rem;
   height: 10rem;
   display: flex;
@@ -992,12 +948,8 @@ footer p {
 }
 
 .fa-solid {
-  /*Iconos de admin*/
   font-size: 3.32rem;
 }
-
-/******----- Buscar Usuarios Administradores-----------*********/
-/***---buscarUsuarioAdmin.html---***/
 
 .box-usuarios-admin-lista {
   display: flex;
@@ -1027,12 +979,6 @@ footer p {
   font-size: 1.2rem;
 }
 
-/***------librosVencidosAdmin.html
- *        
- *        librosActivosAdmin.html
- *
- * *****----***/
-
 .box-info-librosVencidos,
 .box-info-librosActivos,
 .box-info-multas {
@@ -1045,4 +991,409 @@ footer p {
   list-style: none;
   font-family: "Open Sans";
   font-size: 1.32rem;
+}
+
+/* ==========================================
+   RESPONSIVE — DISEÑO COMPLETO
+   ========================================== */
+
+/* Hamburguesa — oculta en desktop */
+#btn-hamburguesa {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1001;
+}
+
+#btn-hamburguesa span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: black;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+#btn-hamburguesa.abierto span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+#btn-hamburguesa.abierto span:nth-child(2) {
+  opacity: 0;
+}
+#btn-hamburguesa.abierto span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ==========================================
+   PANTALLAS GRANDES — 19"+ (1920px+)
+   ========================================== */
+@media (min-width: 1920px) {
+  #boxTitulo p {
+    font-size: 6em;
+  }
+  .carta-libro {
+    padding: 4rem;
+  }
+  .box-info-libroSection .titulo {
+    font-size: 3.5rem;
+  }
+  .box-info-libroSection .autor {
+    font-size: 2.5rem;
+  }
+  .box-info-libroSection .sinopsis {
+    font-size: 2rem;
+  }
+  .box-info-nobels .nombre {
+    font-size: 4rem;
+  }
+}
+
+/* ==========================================
+   PANTALLAS 16" (1440px - 1919px)
+   ========================================== */
+@media (max-width: 1919px) and (min-width: 1440px) {
+  #boxTitulo p {
+    font-size: 5.5em;
+  }
+  .box-info-libroSection .titulo {
+    font-size: 3rem;
+  }
+}
+
+/* ==========================================
+   LAPTOP 14-15" (1280px - 1439px)
+   ========================================== */
+@media (max-width: 1439px) and (min-width: 1280px) {
+  #boxTitulo p {
+    font-size: 4.5em;
+  }
+  .carta-libro {
+    padding: 2.5rem;
+  }
+  .box-info-libroSection .titulo {
+    font-size: 2.8rem;
+  }
+  .box-info-libroSection .autor {
+    font-size: 2rem;
+  }
+  .box-info-nobels {
+    padding: 0 6em;
+  }
+}
+
+/* ==========================================
+   LAPTOP 12-13" (1024px - 1279px)
+   ========================================== */
+@media (max-width: 1279px) and (min-width: 1025px) {
+  #boxTitulo p {
+    font-size: 4em;
+  }
+  .carta-libro {
+    padding: 2rem;
+  }
+  .box-info-libroSection .titulo {
+    font-size: 2.5rem;
+  }
+  .box-info-libroSection .autor {
+    font-size: 1.8rem;
+  }
+  .box-info-libroSection .sinopsis {
+    font-size: 1.5rem;
+  }
+  .box-info-nobels {
+    padding: 0 4em;
+  }
+  .box-info-nobels .nombre {
+    font-size: 2.8em;
+  }
+  #contenedor-generos-libro {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+}
+
+/* ==========================================
+   TABLET (768px - 1024px)
+   ========================================== */
+@media (max-width: 1024px) and (min-width: 769px) {
+  #boxTitulo p {
+    font-size: 3.5em;
+  }
+  .carta-libro {
+    padding: 2rem;
+  }
+  .box-img-libroSection {
+    width: 35%;
+  }
+  .box-info-libroSection .titulo {
+    font-size: 2rem;
+  }
+  .box-info-libroSection .autor {
+    font-size: 1.5rem;
+  }
+  .box-info-libroSection .sinopsis {
+    font-size: 1.3rem;
+  }
+  .box-info-nobels {
+    padding: 0 3em;
+  }
+  .box-info-nobels .nombre {
+    font-size: 2.5em;
+  }
+  #latinoAmerica {
+    padding: 1.5em 2em;
+  }
+  #contenedor-generos-libro {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  .box-menu-administracion {
+    grid-template-columns: repeat(2, max-content);
+    gap: 1rem;
+  }
+}
+
+/* ==========================================
+   MÓVIL GRANDE (481px - 768px)
+   ========================================== */
+@media (max-width: 768px) {
+  #boxHeaderMenu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem;
+    position: relative;
+  }
+
+  #boxTitulo p {
+    font-size: 2rem;
+    text-align: left;
+    padding-top: 0;
+  }
+
+  #btn-hamburguesa {
+    display: flex;
+  }
+
+  #boxMenu {
+    display: none;
+    width: 100%;
+    background-color: white;
+    padding: 1rem 0;
+    border-top: 1px solid #eee;
+    position: absolute;
+    left: 0;
+    z-index: 999;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  #boxMenu.menu-abierto {
+    display: block;
+  }
+
+  #boxMenu ul {
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+  }
+
+  #boxMenu ul li {
+    width: 100%;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  #boxMenu ul li a {
+    display: block;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+  }
+
+  .texto {
+    width: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .texto h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+  }
+  .texto p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .carta-libro {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  .box-img-libroSection {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+  }
+
+  .portada {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .box-info-libroSection {
+    margin-left: 0;
+    margin-top: 1rem;
+    padding: 0;
+  }
+  .box-info-libroSection .titulo {
+    font-size: 2rem;
+  }
+  .box-info-libroSection .autor {
+    font-size: 1.5rem;
+  }
+  .box-info-libroSection .sinopsis {
+    font-size: 1.2rem;
+  }
+  .box-info-libroSection .genero,
+  .box-info-libroSection .anio {
+    font-size: 1.2rem;
+  }
+
+  .box-info-nobels {
+    padding: 0 1.5rem;
+  }
+  .box-info-nobels .nombre {
+    font-size: 2rem;
+  }
+  .box-info-nobels ul .motivo,
+  .nacionalidad,
+  .anio {
+    font-size: 1.2rem;
+  }
+
+  #contenedor-generos-libro {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .libro-box-genero {
+    height: auto;
+    min-height: 20em;
+  }
+
+  .libro-box-genero .portada-genero {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    object-position: center;
+    background-color: #f9f9f9;
+  }
+
+  #filtro-genero-libros #filtro-box {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+
+  #genero-libros {
+    width: 80%;
+    height: 2.5em;
+    font-size: 1rem;
+  }
+  #button-genero-filtro {
+    width: 80%;
+    padding: 0.8em;
+    font-size: 1rem;
+  }
+
+  #filtro-box {
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 1rem;
+  }
+  #busqueda-autor-libro-section {
+    width: 90%;
+  }
+
+  #latinoAmerica {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .imgGanadorNobel {
+    width: 100%;
+  }
+  #info-exponentes {
+    width: 100%;
+    padding: 1.5rem 0;
+  }
+  #info-exponentes a {
+    width: 60%;
+  }
+
+  .box-usuarios-admin-lista {
+    margin-left: 5%;
+  }
+  .box-menu-administracion {
+    grid-template-columns: repeat(1, max-content);
+  }
+
+  footer {
+    height: auto;
+    padding: 2rem 1rem;
+  }
+}
+
+/* ==========================================
+   MÓVIL PEQUEÑO (hasta 480px)
+   ========================================== */
+@media (max-width: 480px) {
+  #boxTitulo p {
+    font-size: 1.5rem;
+  }
+  .texto h2 {
+    font-size: 1.4rem;
+  }
+  .galeria {
+    height: 22em;
+  }
+  .galeria li {
+    height: 22em;
+  }
+  .box-info-libroSection .titulo {
+    font-size: 1.6rem;
+  }
+  .box-info-libroSection .autor {
+    font-size: 1.2rem;
+  }
+  .box-info-nobels .nombre {
+    font-size: 1.6rem;
+  }
+
+  #contenedor-generos-libro {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0.8rem;
+    gap: 0.8rem;
+  }
+
+  .libro-box-genero .portada-genero {
+    height: 160px;
+    object-fit: contain;
+  }
+
+  .box-option-administracion {
+    width: 15rem;
+  }
+  .box-button-atras-UsuAdmin a {
+    width: 40%;
+  }
+  footer {
+    padding: 1.5rem 0.8rem;
+  }
 }
