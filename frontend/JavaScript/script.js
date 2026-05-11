@@ -316,34 +316,99 @@ document.addEventListener("DOMContentLoaded", () => {
   //=======================================================
 
   // Navegación a Buscar Usuarios
-const btnBuscar = document.getElementById("button-buscarUsuario");
-if (btnBuscar) {
-    btnBuscar.onclick = function() {
-        window.location.href = "buscarUsuariosAdmin.html";
+  const btnBuscar = document.getElementById("button-buscarUsuario");
+  if (btnBuscar) {
+    btnBuscar.onclick = function () {
+      window.location.href = "buscarUsuariosAdmin.html";
     };
-}
+  }
 
-// Navegación Libros Vencidos (Ojo: sin la "s" extra para que coincida con tu HTML)
-const btnVencidos = document.getElementById("button-libroVencidos");
-if (btnVencidos) {
-    btnVencidos.onclick = function() {
-        window.location.href = "librosVencidosAdmin.html";
+  // Navegación Libros Vencidos (Ojo: sin la "s" extra para que coincida con tu HTML)
+  const btnVencidos = document.getElementById("button-libroVencidos");
+  if (btnVencidos) {
+    btnVencidos.onclick = function () {
+      window.location.href = "librosVencidosAdmin.html";
     };
-}
+  }
 
-// Navegación Libros Activos
-const btnActivos = document.getElementById("button-libroActivos");
-if (btnActivos) {
-    btnActivos.onclick = function() {
-        window.location.href = "librosActivosAdmin.html";
+  // Navegación Libros Activos
+  const btnActivos = document.getElementById("button-libroActivos");
+  if (btnActivos) {
+    btnActivos.onclick = function () {
+      window.location.href = "librosActivosAdmin.html";
     };
-}
+  }
 
-// Navegación Multas (Cambiado a getElementById y cerrada la llave)
-const btnMultas = document.getElementById("button-multasAdmin");
-if (btnMultas) {
-    btnMultas.onclick = function() {
-        window.location.href = "multasAdmin.html";
+  // Navegación Multas (Cambiado a getElementById y cerrada la llave)
+  const btnMultas = document.getElementById("button-multasAdmin");
+  if (btnMultas) {
+    btnMultas.onclick = function () {
+      window.location.href = "multasAdmin.html";
     };
-}
+  }
+
+  // =============================================
+  // LÓGICA PARA buscarUsuariosAdmin.html
+  // =============================================
+
+  const listaUsuarios = document.getElementById("lista-usuarios-UsuariosAdm");
+  const templateUsuario = document.getElementById("template-usuario");
+
+  if (listaUsuarios && templateUsuario) {
+    fetch("http://127.0.0.1:5000/api/usuarios")
+      .then((respuesta) => respuesta.json())
+      .then((usuarios) => {
+        usuarios.forEach((usuario) => {
+          const fragmento = templateUsuario.content.cloneNode(true);
+
+          fragmento.querySelector(".nombre-usuario-admin").textContent =
+            usuario.nombre;
+          fragmento.querySelector(".id-usuario-admin").textContent =
+            `     ID:      ${usuario.id}`;
+
+          //Llena los libros prestados de cada usuario
+          const lista = fragmento.querySelector(".lista-libros-prestados");
+          usuario.librosPrestados.forEach((prestamo) => {
+            const li = document.createElement("li");
+            li.textContent = `📕 ${prestamo.libro} - 📜 VENCE: ${prestamo.fecha_vencimiento}`;
+            lista.appendChild(li);
+          });
+
+          listaUsuarios.appendChild(fragmento);
+        });
+      })
+
+      .catch((error) => console.error("Error al obtener usuarios:", error));
+  }
+
+  //========================================================
+  // LÓGICA PARA librosVencidosAdmin.html
+  //=======================================================
+
+  const listaVencidos = document.getElementById(
+    "menu-administracion-librosVencidos",
+  );
+  const templateVencidos = document.getElementById("template-libros-vencidos");
+
+  if (listaVencidos && templateVencidos) {
+    fetch("http://127.0.0.1:5000/api/usuarios/vencidos")
+      .then((respuesta) => respuesta.json())
+      .then((vencidos) => {
+        vencidos.forEach((prestamo) => {
+          const fragmento = templateVencidos.content.cloneNode(true);
+
+          fragmento.querySelector(".nombre-Usuario-adminUsuario").textContent =
+            `🙍‍♂ Usuario: ${prestamo.nombre}`;
+          fragmento.querySelector(
+            ".libroVencido-Usuario-adminUsuario",
+          ).textContent = `📖 Libro:  ${prestamo.libro}`;
+          fragmento.querySelector(
+            ".fechaVencido-Usuario-adminUsuario",
+          ).textContent = `📅 Vencido: 2026-04-01`;
+
+          listaVencidos.appendChild(fragmento);
+        });
+      })
+      .catch((error) => console.error("Error al obtener vencidos:", error));
+  }
 });
