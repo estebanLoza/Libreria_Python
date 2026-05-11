@@ -21,3 +21,60 @@ Ahora pongo en prácica el uso de la programación en estrucutra de datos y usan
 ## v3.1 Flask👈 ( 🛠️)
 
 Agrego ahora una interfaz mucho mejor dejando a un lado la terminal para poder visualizar el menu y una sección especial para las administradores.
+
+#Como correr el programa de manera local
+
+
+
+## Biblioteca Santa Fe 📖
+
+Sistema de gestión de biblioteca con Flask como API y frontend en HTML/CSS/JS.
+
+## Tecnologías
+- Python 3 + Flask
+- SQLite
+- HTML / CSS / JavaScript vanilla
+
+## Requisitos
+- Python 3.10+
+- pip
+
+## Instalación
+
+### 1. Clona el repositorio
+```bash
+git clone https://github.com/tu-usuario/Libreria_Python.git
+cd Libreria_Python
+```
+
+### 2. Instala dependencias
+```bash
+pip install flask flask-cors
+```
+
+### 3. Inicializa la base de datos
+```bash
+python3 data/inicializar_db.py
+```
+
+### 4. Corre el servidor Flask
+```bash
+python3 app.py
+```
+
+### 5. Abre el frontend
+Abre `frontend/index.html` con Live Server en VS Code
+o visita `http://127.0.0.1:5500/frontend/index.html`
+
+La API corre en `http://127.0.0.1:5000`
+
+## Rutas disponibles
+- `GET /api/libros` — todos los libros
+- `GET /api/libros/autor/<autor>` — libros por autor
+- `GET /api/libros/genero/<genero>` — libros por género
+- `GET /api/nobel` — ganadores Premio Nobel
+- `GET /api/usuarios` — usuarios con préstamos
+- `GET /api/usuarios/vencidos` — préstamos vencidos
+- `GET /api/usuarios/activos` — préstamos activos
+- `GET /api/usuarios/multas` — multas pendientes
+- `POST /api/login` — autenticación administrador
