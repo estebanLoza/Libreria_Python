@@ -40,4 +40,35 @@ def obtener_vencidos():
 
     return jsonify(vencidos)
 
+@usuarios_bp.route("/api/usuarios/activos")
 
+def obtener_activos():
+    activos = []
+
+    for usuario in gestorUsuarios.usuarios:
+        for prestamo in usuario.librosPrestados:
+            if not prestamo.esta_vencido():
+                activos.append({
+                    "nombre":       usuario.nombre,
+                    "libro":        prestamo.libro,
+                    "fecha_vencimiento": str(prestamo.fecha_vencimiento)
+                    })
+    return  jsonify(activos)
+
+
+
+@usuarios_bp.route("/api/usuarios/multas")
+def obtener_multas():
+    multas = []
+
+    for usuario in gestorUsuarios.usuarios:
+        multa_total = 0
+        for prestamo in usuario.librosPrestados:
+            multa_total += prestamo.calcular_multa()
+
+        if multa_total > 0:
+            multas.append({
+                "nombre":   usuario.nombre,
+                "multa_total": multa_total
+            })
+    return jsonify(multas)
