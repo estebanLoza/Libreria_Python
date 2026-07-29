@@ -1,5 +1,11 @@
 # Libreria Python Project 📖
 
+### Video Interacción de la Página Web
+
+<img width="400" height="213" alt="Escritores - Brave 2026-05-11 01-46-59" src="https://github.com/user-attachments/assets/8a4781e6-47a2-41d2-a76b-dd5c384ecc32" />
+
+
+
 Este es un proyecto peronal, dónde pongo en práctica cada uno de los temas que he visto, desde lo básico que he aprendido en un curso básico hasta donde pueda llegar mi
 deseo por aprender.
 
@@ -79,9 +85,6 @@ La API corre en `http://127.0.0.1:5000`
 - `GET /api/usuarios/multas` — multas pendientes
 - `POST /api/login` — autenticación administrador
 
-## Video Interacción de la Página Web
-
-<img width="400" height="213" alt="Escritores - Brave 2026-05-11 01-46-59" src="https://github.com/user-attachments/assets/8a4781e6-47a2-41d2-a76b-dd5c384ecc32" />
 
 
 
